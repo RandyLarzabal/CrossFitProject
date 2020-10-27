@@ -1,0 +1,22 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "CrossFit eMarket",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RandyLarzabal/CrossFitProject.git"
+  },
+  "author": "Brinkmans Antoine, Larzabal Randy, Thomas Faure",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RandyLarzabal/CrossFitProject/issues"
+  },
+  "homepage": "https://github.com/RandyLarzabal/CrossFitProject#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
