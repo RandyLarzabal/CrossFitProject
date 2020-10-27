@@ -1,8 +1,9 @@
 import React from "react";
-import "./App.css";
+import "./App.scss";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import HomeScreen from "./screen/HomeScreen";
+import {ProductCard} from "./component";
 
 function App() {
   return (
@@ -25,8 +26,10 @@ function App() {
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Switch>
-          <Route path="/">
+          <Route exact path="/">
             <HomeScreen />
+          </Route>
+          <Route exact path="/about">
           </Route>
         </Switch>
       </div>
