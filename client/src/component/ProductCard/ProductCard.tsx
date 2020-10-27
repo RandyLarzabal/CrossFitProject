@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React from "react";
 
 export type ProductCardType = {
   title: string;
@@ -9,7 +9,7 @@ export type ProductCardType = {
   price: string;
 };
 
-export default function ProductCard(props: ProductCardType): JSX.Element {
+export function ProductCard(props: ProductCardType): JSX.Element {
   const { title, sousTitre, colorsNumber, description, photo, price } = props;
   return (
     <div>
