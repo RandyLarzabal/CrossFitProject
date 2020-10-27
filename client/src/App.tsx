@@ -1,10 +1,13 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
-import { ProductCard } from "./component";
+import ProductCard from "./component";
 
 function App() {
-  return <ProductCard photo="url" price="3$" title="je suis un tire" />;
+  return (
+    <div>
+      <ProductCard photo="url" price="3$" title="je suis un tire" />
+    </div>
+  );
 }
 
 export default App;
