@@ -1,4 +1,5 @@
 import React from "react";
+import "./style.scss";
 
 export type ProductCardType = {
   title: string;
@@ -13,8 +14,10 @@ export function ProductCard(props: ProductCardType): JSX.Element {
   const { title, sousTitre, colorsNumber, description, photo, price } = props;
   return (
     <div>
-      <p>{title}</p>
-      <p>{photo}</p>
+      <img src={photo} alt="product"/>
+      <h3>{title}</h3>
+      <p className="gray">{sousTitre}</p>
+      <p className="gray sixteen">{colorsNumber}</p>
       <p>{price}</p>
     </div>
   );
