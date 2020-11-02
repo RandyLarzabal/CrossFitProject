@@ -3,7 +3,7 @@ import "./App.scss";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import HomeScreen from "./screen/HomeScreen";
-import {ProductCard} from "./component";
+import { ProductCard } from "./component";
 
 function App() {
   return (
@@ -29,8 +29,7 @@ function App() {
           <Route exact path="/">
             <HomeScreen />
           </Route>
-          <Route exact path="/about">
-          </Route>
+          <Route exact path="/about"/>
         </Switch>
       </div>
     </Router>
