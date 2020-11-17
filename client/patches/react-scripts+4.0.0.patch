@@ -1,0 +1,31 @@
+diff --git a/node_modules/react-scripts/config/webpack.config.js b/node_modules/react-scripts/config/webpack.config.js
+index 80c6ac2..ab342a8 100644
+--- a/node_modules/react-scripts/config/webpack.config.js
++++ b/node_modules/react-scripts/config/webpack.config.js
+@@ -90,6 +90,7 @@ module.exports = function (webpackEnv) {
+   const isEnvDevelopment = webpackEnv === 'development';
+   const isEnvProduction = webpackEnv === 'production';
+ 
++
+   // Variable used for enabling profiling in Production
+   // passed into alias object. Uses a flag if passed into the build command
+   const isEnvProductionProfile =
+@@ -103,6 +104,9 @@ module.exports = function (webpackEnv) {
+ 
+   const shouldUseReactRefresh = env.raw.FAST_REFRESH;
+ 
++  const ESLintPlugin = require('eslint-webpack-plugin');
++
++
+   // common function to get style loaders
+   const getStyleLoaders = (cssOptions, preProcessor) => {
+     const loaders = [
+@@ -754,6 +758,8 @@ module.exports = function (webpackEnv) {
+         context: paths.appSrc,
+         // ESLint class options
+         cwd: paths.appPath,
++        failOnError: false,
++        emitWarning: true,
+         resolvePluginsRelativeTo: __dirname,
+         baseConfig: {
+           extends: [require.resolve('eslint-config-react-app/base')],

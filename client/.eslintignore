@@ -1,0 +1,12 @@
+.idea
+node_modules
+patches
+public
+.eslintignore
+.eslintrc
+.gitignore
+package-lock.json
+README.md
+tsconfig.eslint.json
+tsconfig.json
+.prettierrc.js
