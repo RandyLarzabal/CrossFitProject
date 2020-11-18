@@ -1,23 +1,27 @@
 module.exports = {
-    root: true,
-    parser: "@typescript-eslint/parser",
-    plugins: ["react", "@typescript-eslint", "prettier", "jest"],
+    env: {
+        browser: true,
+        es2021: true,
+    },
     extends: [
         "eslint:recommended",
         "plugin:react/recommended",
         "plugin:@typescript-eslint/eslint-recommended",
         "plugin:@typescript-eslint/recommended",
         "prettier",
-        "plugin:jest/recommended",
     ],
+    parser: "@typescript-eslint/parser",
+    parserOptions: {
+        ecmaFeatures: {
+            jsx: true,
+        },
+        ecmaVersion: 12,
+        sourceType: "module",
+    },
+    plugins: ["react", "@typescript-eslint", "prettier"],
     rules: {
         "no-console": 1,
         "prettier/prettier": 2,
-        "jest/no-disabled-tests": "warn",
-        "jest/no-focused-tests": "error",
-        "jest/no-identical-title": "error",
-        "jest/prefer-to-have-length": "warn",
-        "jest/valid-expect": "error",
     },
     settings: {
         react: {
@@ -25,8 +29,5 @@ module.exports = {
             version: "detect",
         },
         "import/extensions": [".js", ".jsx", ".ts", ".tsx", ".mjs", ".json", ".ttf"],
-    },
-    env: {
-        "jest/globals": true,
     },
 };
