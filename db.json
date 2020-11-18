@@ -1,0 +1,19 @@
+{
+  "chaussure": [
+    {
+      "id": 1,
+      "title": "nike air",
+      "price": 104
+    },
+        {
+      "id": 2,
+      "title": "nike air 2",
+      "price": 184
+    },
+        {
+      "id": 3,
+      "title": "nike air 3",
+      "price": 134
+    }
+  ]
+}
