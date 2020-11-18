@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import HomeScreen from "./screen/HomeScreen";
 import { ProductCard } from "./component";
-
+//todo add a proxy to the package.json proxy:"http://localhost:3001"
 function App() {
   return (
     <Router>
