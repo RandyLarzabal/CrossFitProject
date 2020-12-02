@@ -3,29 +3,29 @@
     {
       "id": 1,
       "title": "nike air",
-      "price": 104
-      "categorie":"chaussure"
-      "stock":10
-      "photos": [{"url":"lien","alt":"je suis une description"}]
-      "primaryPhoto":{"url":"lien","alt":"je suis une description"}
+      "price": 104,
+      "categorie":"chaussure",
+      "stock":10,
+      "photos": [{"url":"lien","alt":"je suis une description"}],
+      "primaryPhoto":{"url":"lien","alt":"je suis une description"},
     },
         {
       "id": 2,
       "title": "nike air",
-      "price": 140
-      "categorie":"chaussure"
-      "stock":10
-      "photos": [{"url":"lien","alt":"je suis une description"}]
-      "primaryPhoto":{"url":"lien","alt":"je suis une description"}
+      "price": 140,
+      "categorie":"chaussure",
+      "stock":10,
+      "photos": [{"url":"lien","alt":"je suis une description"}],
+      "primaryPhoto":{"url":"lien","alt":"je suis une description"},
     },
         {
       "id": 3,
       "title": "nike air",
-      "price": 50
-      "categorie":"chaussure"
-      "stock":10
-      "photos": [{"url":"lien","alt":"je suis une description"}]
-      "primaryPhoto":{"url":"lien","alt":"je suis une description"}
+      "price": 50,
+      "categorie":"chaussure",
+      "stock":10,
+      "photos": [{"url":"lien","alt":"je suis une description"}],
+      "primaryPhoto":{"url":"lien","alt":"je suis une description"},
     }
   ]
 }
