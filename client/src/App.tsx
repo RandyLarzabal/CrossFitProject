@@ -10,6 +10,7 @@ function App(): JSX.Element {
         <>
             <Router>
                 <div>
+                    {"bar noir"}
                     <nav>
                         <ul>
                             <li>
@@ -32,6 +33,7 @@ function App(): JSX.Element {
                         </Route>
                         <Route exact path="/about" />
                     </Switch>
+                    {"bar footer"}
                 </div>
             </Router>
         </>
