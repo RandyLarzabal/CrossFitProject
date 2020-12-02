@@ -10,7 +10,14 @@ function App(): JSX.Element {
         <>
             <Router>
                 <div>
-                    {"bar noir"}
+                    
+                    <div className="blackBar">
+                      <a>AIDE</a>
+                      <a className="connexion">CONNEXION</a>
+                      <img src="cart.svg" alt="Mon panier"/>
+                      <img src="search.svg" alt="Rechercher"/>
+                    </div>
+
                     <nav>
                         <ul>
                             <li>

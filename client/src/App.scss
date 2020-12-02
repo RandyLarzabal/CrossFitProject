@@ -17,3 +17,28 @@ $normalSize: 18px;
 /***Spacing****/
 
 $normalSpacing: 16px;
+
+// Black bar
+.blackBar {
+  width: 100vw;
+  height: 42px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #1A1919;
+  padding-right: 50px;
+
+  a {
+    height: 42px;
+    font-family: AdriannaCondensedSemiBold, sans-serif;
+    font-size: 14px;
+    padding: 0px 20px;
+    line-height: 42px;
+    color: white;
+
+    &.connexion {
+      border-left: 1px solid #707070;
+      border-right: 1px solid #707070;
+    }
+  }
+}
