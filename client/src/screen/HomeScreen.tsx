@@ -1,13 +1,24 @@
-import React, { useEffect } from "react";
-import Api from "../utils/Api";
+import React, { useState } from "react";
+import list from "../db.json";
+import { ProductCard } from "../component";
 
 export default function HomeScreen(): JSX.Element {
-    useEffect(() => {
-        callApi();
-    }, []);
+    const [products, setProductq] = useState(list);
 
-    const callApi = async () => {
-        console.log(await Api.getChaussure());
+    const productList = (): JSX.Element => {
+        return (
+            <>
+                {products.chaussure.map((value) => (
+                    <ProductCard
+                        key={value.id}
+                        title={value.title}
+                        photo={value.primaryPhoto}
+                        price={value.price}
+                        url={value.productUrl}
+                    />
+                ))}
+            </>
+        );
     };
-    return <p>home</p>;
+    return <div>{productList()}</div>;
 }
