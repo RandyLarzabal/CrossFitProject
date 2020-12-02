@@ -5,7 +5,7 @@ import { ProductCard } from "../component";
 export default function HomeScreen(): JSX.Element {
     const [products, setProductq] = useState(list);
 
-    const productList = (): JSX.Element => {
+    const productListRender = (): JSX.Element => {
         return (
             <>
                 {products.chaussure.map((value) => (
@@ -15,10 +15,11 @@ export default function HomeScreen(): JSX.Element {
                         photo={value.primaryPhoto}
                         price={value.price}
                         url={value.productUrl}
+                        categorie={value.categorie}
                     />
                 ))}
             </>
         );
     };
-    return <div>{productList()}</div>;
+    return <div>{productListRender()}</div>;
 }
