@@ -12,7 +12,7 @@ function App(): JSX.Element {
                 <div>
                     <div className={styles.blackBar}>
                         <a>AIDE</a>
-                        <a className="connexion">CONNEXION</a>
+                        <a className={styles.connexion}>CONNEXION</a>
                         <img src="cart.svg" alt="Mon panier" />
                         <img src="search.svg" alt="Rechercher" />
                     </div>
