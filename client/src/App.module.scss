@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+body {
+  overflow-x: hidden;
+}
+
+
 /***Colors****/
 
 /***Fonts****/
@@ -17,6 +22,12 @@ $normalSize: 18px;
 /***Spacing****/
 
 $normalSpacing: 16px;
+
+// Container Bootstrap
+.container {
+  width: 1140px;
+  margin: auto;
+}
 
 // Black bar
 .blackBar {
@@ -40,5 +51,42 @@ $normalSpacing: 16px;
       border-left: 1px solid #707070;
       border-right: 1px solid #707070;
     }
+  }
+}
+
+// Black footer
+.footer {
+  background-color: #222222;
+  color: white;
+
+  .container {
+    display: flex; 
+    justify-content: space-between;
+    
+    .adresse, .suivezNous, .horaires {
+      width: 200px;
+      padding: 70px 0;
+
+      h5 {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 30px;
+      }
+
+      p {
+        color: #FBFBFB;
+        font-size: 18px;
+        line-height: 21px;
+      }
+    }
+
+    &.copyright {
+      padding-bottom: 10px;
+
+      p {
+        font-size: 16px;
+        color: #AFAFAF;
+      }
+    } 
   }
 }
