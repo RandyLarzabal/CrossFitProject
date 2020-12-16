@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import list from "../db.json";
-import { ProductCard } from "../component";
+import list from "../../db.json";
+import { ProductCard } from "../../component";
 
 export default function HomeScreen(): JSX.Element {
     const [products, setProductq] = useState(list);
