@@ -20,21 +20,18 @@ export type ProductCardType = {
 export function ProductCard(props: ProductCardType): JSX.Element {
     const { title, categorie, photo, price } = props;
     return (
-
-        <Link to={"/"} style={{textDecoration: "none"}}>
-            <div className="productCard">
-
+        <Link to={"/"} style={{ textDecoration: "none" }}>
+            <div className="productCard blackBar">
                 <img src={photo.url} alt={photo.alt} />
-                
+
                 <div className="flex">
                     <p className="categorie">{categorie}</p>
                     <h4 className="price">{price} €</h4>
                 </div>
-                
-                <div className="bar"></div>
-                
-                <h3 className="title">{title}</h3>
 
+                <div className="bar"></div>
+
+                <h3 className="title">{title}</h3>
             </div>
         </Link>
 

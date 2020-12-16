@@ -1,5 +1,5 @@
 import React from "react";
-import "./App.scss";
+import styles from "./App.module.scss";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import HomeScreen from "./screen/HomeScreen";
@@ -10,12 +10,11 @@ function App(): JSX.Element {
         <>
             <Router>
                 <div>
-                    
-                    <div className="blackBar">
-                      <a>AIDE</a>
-                      <a className="connexion">CONNEXION</a>
-                      <img src="cart.svg" alt="Mon panier"/>
-                      <img src="search.svg" alt="Rechercher"/>
+                    <div className={styles.blackBar}>
+                        <a>AIDE</a>
+                        <a className="connexion">CONNEXION</a>
+                        <img src="cart.svg" alt="Mon panier" />
+                        <img src="search.svg" alt="Rechercher" />
                     </div>
 
                     <nav>
