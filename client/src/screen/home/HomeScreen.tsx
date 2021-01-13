@@ -3,7 +3,7 @@ import list from "../../db.json";
 import { ProductCard } from "../../component";
 import Title from "../../component/Title/Title";
 import { inspect } from "util";
-import styles from "../App.module.scss";
+import styles from "../../App.module.scss";
 
 export default function HomeScreen(): JSX.Element {
     const { container, row } = styles;
