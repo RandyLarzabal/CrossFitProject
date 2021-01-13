@@ -39,10 +39,16 @@
     grid-template-rows: repeat(2, 1fr);
     grid-template-areas: 
         "desc one two"
-        ". three four";
+        "desc three four";
     
     div {
         grid-area: desc;
+
+        p {
+            font-size: 16px;
+            width: 250px;
+            margin-bottom: 30px;
+        }
     }
     
     a:nth-of-type(1) {
@@ -61,3 +67,11 @@
         grid-area: four;
     }
 }
+
+.title {
+  
+    &:after{
+      content: "";
+      left: 0%;
+    }
+  }

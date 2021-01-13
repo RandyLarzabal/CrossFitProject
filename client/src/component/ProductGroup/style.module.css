@@ -51,13 +51,20 @@
       grid-template-columns: repeat(3, 1fr);
   -ms-grid-rows: (1fr)[2];
       grid-template-rows: repeat(2, 1fr);
-      grid-template-areas: "desc one two" ". three four";
+      grid-template-areas: "desc one two" "desc three four";
 }
 
 .withDescription div {
   -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
   -ms-grid-column: 1;
   grid-area: desc;
+}
+
+.withDescription div p {
+  font-size: 16px;
+  width: 250px;
+  margin-bottom: 30px;
 }
 
 .withDescription a:nth-of-type(1) {
@@ -82,5 +89,10 @@
   -ms-grid-row: 2;
   -ms-grid-column: 3;
   grid-area: four;
+}
+
+.title:after {
+  content: "";
+  left: 0%;
 }
 /*# sourceMappingURL=style.module.css.map */

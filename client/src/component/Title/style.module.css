@@ -18,4 +18,10 @@
           transform: translateX(-50%);
   position: absolute;
 }
+
+.left:after {
+  left: 0%;
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
 /*# sourceMappingURL=style.module.css.map */

@@ -17,3 +17,10 @@
     position: absolute;
   }
 }
+
+.left {
+  &:after {
+    left: 0%;
+    transform: translateX(0%);
+  }
+}

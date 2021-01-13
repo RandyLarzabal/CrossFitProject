@@ -4,15 +4,16 @@ import styles from "./style.module.scss";
 
 type Props = {
     text: string;
+    bar?: string;
 };
 
 const Title: FunctionComponent<Props> = (props: Props) => {
-    const { text } = props;
+    const { text, bar } = props;
     const { row } = global;
-    const { title } = styles;
+    const { title, left } = styles;
     return (
         <div className={row} style={{ marginBottom: 65 }}>
-            <h2 className={title}>{text}</h2>
+            <h2 className={bar === "left" ? `${title} ${left}` : title}>{text}</h2>
         </div>
     );
 };
