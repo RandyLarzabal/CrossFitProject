@@ -8,9 +8,7 @@ type ImageProps = {
 
 const Image: FC<ImageProps> = (props: ImageProps) => {
     const { src, alt, size } = props;
-    return (
-        <img src={src} alt={alt} style={{objectFit: size}} />
-    );
+    return <img src={src} alt={alt} style={{ objectFit: size }} />;
 };
 
 export default Image;
