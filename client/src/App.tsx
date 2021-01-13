@@ -18,7 +18,7 @@ function App(): JSX.Element {
                         <img src="search.svg" alt="Rechercher" />
                     </div>
 
-                    <nav>
+                    <nav style={{display: "none"}}>
                         <ul>
                             <li>
                                 <Link to="/">Home</Link>
