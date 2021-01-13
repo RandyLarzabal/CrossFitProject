@@ -51,7 +51,7 @@ const ProductGroup: FunctionComponent<Props> = (props: Props) => {
         case GroupType.withMainProduct:
             return <div className={`${grid} ${withMainProduct}`}>{productListRender(5)}</div>;
         case GroupType.withDescription:
-            return <div className={`${grid} ${withDescription}`}>{productListRender(5)}</div>;
+            return <div className={`${grid} ${withDescription}`}>{productListRender(4)}</div>;
     }
 };
 

@@ -33,7 +33,9 @@ export default function HomeScreen(): JSX.Element {
                 </div>
                 */}
                 <ProductGroup groupType={GroupType.basic} />
+                <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
                 <ProductGroup groupType={GroupType.withMainProduct} />
+                <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
                 <ProductGroup groupType={GroupType.withDescription} />
             </div>
 
