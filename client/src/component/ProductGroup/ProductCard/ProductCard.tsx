@@ -36,7 +36,7 @@ export function ProductCard(props: ProductCardType): JSX.Element {
             <div className={productCard}>
                 <div style={{ position: "relative" }}>
                     <img src={photo.url} alt={photo.alt} />
-                    <div style={{ position: "absolute", bottom: 0, left: 0, width: "100%", overflow: "hidden" }}>
+                    <div /* className="buttons" */ style={{ position: "absolute", bottom: 0, left: 0, width: "100%", overflow: "hidden", transform: "translateY(45px)" }}>
                         <button
                             style={{
                                 width: "50%",
@@ -47,7 +47,6 @@ export function ProductCard(props: ProductCardType): JSX.Element {
                                 outline: "none",
                                 fontWeight: "bold",
                                 backgroundColor: colors.black,
-                                //translate: "45px"
                             }}
                             onClick={() => null}
                         >
@@ -63,7 +62,6 @@ export function ProductCard(props: ProductCardType): JSX.Element {
                                 outline: "none",
                                 fontWeight: "bold",
                                 backgroundColor: colors.orange,
-                                //translate: "45px"
                             }}
                             onClick={() => null}
                         >
