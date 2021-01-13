@@ -29,6 +29,11 @@ $normalSpacing: 16px;
   margin: auto;
 }
 
+// Row
+.row {
+  display: flex;
+}
+
 // Black bar
 .blackBar {
   width: 100vw;
