@@ -16,9 +16,9 @@ export type ProductCardType = {
     price: number;
     url: string;
     rating?: number;
-    handleBuy?: () => void;
-    handleSeeMore?: () => void;
-    handleLike?: () => void;
+    handleBuy?: (product: any) => void;
+    handleSeeMore?: (product: any) => void;
+    handleLike?: (product: any) => void;
 };
 
 export function ProductCard(props: ProductCardType): JSX.Element {
@@ -79,14 +79,5 @@ export function ProductCard(props: ProductCardType): JSX.Element {
                 <h3 className={titleClass}>{title}</h3>
             </div>
         </Link>
-
-        /*
-        <Link to={"/"}>
-            <img src={photo.url} alt={photo.alt} />
-            <h3>{title}</h3>
-            <p className="gray">{sousTitre}</p>
-            <p>{price}</p>
-        </Link>
-        */
     );
 }
