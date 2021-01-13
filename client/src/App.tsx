@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import HomeScreen from "./screen/home/HomeScreen";
 import { Footer } from "./component";
+import NavBar from "./component/NavBar/NavBar";
 //todo add a proxy to the package.json proxy:"http://localhost:3001"
 function App(): JSX.Element {
     const { blackBar } = styles;
@@ -17,20 +18,6 @@ function App(): JSX.Element {
                         <img src="cart.svg" alt="Mon panier" />
                         <img src="search.svg" alt="Rechercher" />
                     </div>
-
-                    <nav style={{display: "none"}}>
-                        <ul>
-                            <li>
-                                <Link to="/">Home</Link>
-                            </li>
-                            <li>
-                                <Link to="/about">About</Link>
-                            </li>
-                            <li>
-                                <Link to="/users">Users</Link>
-                            </li>
-                        </ul>
-                    </nav>
 
                     {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
