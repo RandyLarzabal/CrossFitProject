@@ -1,6 +1,7 @@
 import React from "react";
 import style from "./style.module.scss";
 import { Link } from "react-router-dom";
+import { colors } from "../../assets/Colors";
 
 export type PhotoBasics = {
     url: string;
@@ -15,6 +16,9 @@ export type ProductCardType = {
     price: number;
     url: string;
     rating?: number;
+    handleBuy?: () => void;
+    handleSeeMore?: () => void;
+    handleLike?: () => void;
 };
 
 export function ProductCard(props: ProductCardType): JSX.Element {
@@ -30,8 +34,41 @@ export function ProductCard(props: ProductCardType): JSX.Element {
     return (
         <Link to={"/"} style={{ textDecoration: "none" }}>
             <div className={productCard}>
-                <img src={photo.url} alt={photo.alt} />
-
+                <div style={{ position: "relative" }}>
+                    <img src={photo.url} alt={photo.alt} />
+                    <div style={{ position: "absolute", bottom: 0, left: 0, width: "100%" }}>
+                        <button
+                            style={{
+                                width: "50%",
+                                height: 45,
+                                border: "none",
+                                color: "#fff",
+                                fontSize: 11,
+                                outline: "none",
+                                fontWeight: "bold",
+                                backgroundColor: colors.black,
+                            }}
+                            onClick={() => null}
+                        >
+                            X Acheter
+                        </button>
+                        <button
+                            style={{
+                                width: "50%",
+                                height: 45,
+                                border: "none",
+                                color: "#fff",
+                                fontSize: 11,
+                                outline: "none",
+                                fontWeight: "bold",
+                                backgroundColor: colors.orange,
+                            }}
+                            onClick={() => null}
+                        >
+                            X Voir Plus
+                        </button>
+                    </div>
+                </div>
                 <div className={flex}>
                     <p className={categorieClass}>{categorie}</p>
                     <h4 className={priceClass}>{price} €</h4>
