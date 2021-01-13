@@ -3,7 +3,7 @@ import styles from "./App.module.scss";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import HomeScreen from "./screen/home/HomeScreen";
-import { Footer } from "./component";
+import { Footer } from "./component/index";
 import NavBar from "./component/NavBar/NavBar";
 //todo add a proxy to the package.json proxy:"http://localhost:3001"
 function App(): JSX.Element {
