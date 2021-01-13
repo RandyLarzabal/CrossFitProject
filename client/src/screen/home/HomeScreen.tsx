@@ -1,42 +1,70 @@
 import React from "react";
-import Title from "../../component/Title/Title";
+import { Title } from "../../component";
 import global from "../../App.module.scss";
 import Image from "../../component/Image/Image";
 import heroImg from "../../assets/img/hero.jpg";
 import Button from "../../component/Button/Button";
 import styles from "./style.module.scss";
 
-import ReassuranceCard from "../../component/ReassuranceCard/ReassuranceCard";
+import ReassuranceCard from "../../component/ReassuranceGroup/ReassuranceCard/ReassuranceCard";
 
-import ProductGroup, { TypeDonnees, GroupType } from "../../component/ProductGroup/ProductGroup";
+import ProductGroup, {TypeDonnees, GroupType} from "../../component/ProductGroup/ProductGroup";
 
 export default function HomeScreen(): JSX.Element {
-    const { container, row } = global;
-    const { hero } = styles;
+    const {container, row} = global;
+    const {hero} = styles;
 
     return (
         <div>
             <div className={hero}>
-                <Image src={heroImg} alt={"Hero image"} size={"cover"} />
+                <Image src={heroImg} alt={"Hero image"} size={"cover"}/>
                 <div className={container}>
                     <h1>LOREM IPSUM</h1>
                     <p>LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT.</p>
-                    <Button label={"EN SAVOIR PLUS >>"} color={"#F58C03"} />
+                    <Button label={"EN SAVOIR PLUS >>"} color={"#F58C03"}/>
                 </div>
             </div>
 
             <div className={container}>
-                <Title text={"Nos Nouveautés"} />
+                <Title text={"Nos Nouveautés"}/>
                 {/*
                 <div className={row}>
                     <ProductGroup type={TypeDonnees.nouveautes} />
                 </div>
                 */}
-                <ProductGroup groupType={GroupType.basic} />
-                <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-                <ProductGroup groupType={GroupType.withMainProduct} />
-                <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-                <ProductGroup groupType={GroupType.withDescription} />
+                <ProductGroup groupType={GroupType.basic}/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <ProductGroup groupType={GroupType.withMainProduct}/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <ProductGroup groupType={GroupType.withDescription}/>
             </div>
 
             <div className={container}>
