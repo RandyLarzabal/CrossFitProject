@@ -7,7 +7,7 @@ type ButtonProps = {
     handleClick?: () => void;
 };
 
-const Image: FC<ButtonProps> = (props: ButtonProps) => {
+const Button: FC<ButtonProps> = (props: ButtonProps) => {
     const { label, color, handleClick } = props;
     const { button } = styles;
     return (
@@ -22,4 +22,4 @@ const Image: FC<ButtonProps> = (props: ButtonProps) => {
     );
 };
 
-export default Image;
+export default Button;
