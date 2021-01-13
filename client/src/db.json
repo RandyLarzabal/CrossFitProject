@@ -1,21 +1,57 @@
 {
-  "chaussure":[
+  "nouveautes": [
     {
-      "id":1,
-      "title":"nike air",
-      "price":104,
-      "categorie":"streetwear",
-      "stock":10,
+      "id": 1,
+      "title": "Fenua Sportswear Tech",
+      "price": 104,
+      "categorie": "streetwear",
+      "stock": 10,
       "productUrl": "un lien",
-      "photos":[
+      "photos": [
         {
-          "url":"lien",
-          "alt":"je suis une description"
+          "url": "lien",
+          "alt": "je suis une description"
         }
       ],
-      "primaryPhoto":{
-        "url":"https://images-na.ssl-images-amazon.com/images/I/61BVQkyFurL._AC_UL1500_.jpg",
-        "alt":"je suis une description"
+      "primaryPhoto": {
+        "url": "https://images-na.ssl-images-amazon.com/images/I/61BVQkyFurL._AC_UL1500_.jpg",
+        "alt": "je suis une description"
+      }
+    },
+    {
+      "id": 2,
+      "title": "Fenua Sportswear Air MAx",
+      "price": 104,
+      "categorie": "streetwear",
+      "stock": 10,
+      "productUrl": "un lien",
+      "photos": [
+        {
+          "url": "lien",
+          "alt": "je suis une description"
+        }
+      ],
+      "primaryPhoto": {
+        "url": "https://images-na.ssl-images-amazon.com/images/I/61BVQkyFurL._AC_UL1500_.jpg",
+        "alt": "je suis une description"
+      }
+    },
+    {
+      "id": 3,
+      "title": "Fenua ESC",
+      "price": 104,
+      "categorie": "streetwear",
+      "stock": 10,
+      "productUrl": "un lien",
+      "photos": [
+        {
+          "url": "lien",
+          "alt": "je suis une description"
+        }
+      ],
+      "primaryPhoto": {
+        "url": "https://images-na.ssl-images-amazon.com/images/I/61BVQkyFurL._AC_UL1500_.jpg",
+        "alt": "je suis une description"
       }
     }
   ]

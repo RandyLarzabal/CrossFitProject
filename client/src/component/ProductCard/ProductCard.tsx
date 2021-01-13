@@ -29,7 +29,7 @@ export function ProductCard(props: ProductCardType): JSX.Element {
                     <h4 className="price">{price} €</h4>
                 </div>
 
-                <div className="bar"></div>
+                <div className="bar" />
 
                 <h3 className="title">{title}</h3>
             </div>
