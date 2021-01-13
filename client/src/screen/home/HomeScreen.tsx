@@ -8,6 +8,7 @@ import Image from "../../component/Image/Image";
 import heroImg from "../../assets/img/hero.jpg";
 import Button from "../../component/Button/Button";
 import styles from "./style.module.scss";
+import ReassuranceCard from "../../component/ReassuranceCard/ReassuranceCard";
 
 export default function HomeScreen(): JSX.Element {
     const { container, row } = global;
@@ -33,6 +34,7 @@ export default function HomeScreen(): JSX.Element {
 
     return (
         <div>
+
             <div className={hero}>
                 <Image src={heroImg} alt={"Hero image"} size={"cover"} />
                 <div className={container}>
@@ -41,9 +43,14 @@ export default function HomeScreen(): JSX.Element {
                     <Button label={"EN SAVOIR PLUS >>"} color={"#F58C03"} />
                 </div>
             </div>
+
             <div className={container}>
                 <Title text={"Nos Nouveautés"} />
                 <div className={row}>{productListRender()}</div>
+            </div>
+
+            <div className={container}>
+                <ReassuranceCard icon={"oui"} title={"LIVRAISON EN 48H"} description={"Lorem ipsum dolor sit amet, consetetur sadipscing elitr"} />
             </div>
         </div>
     );
