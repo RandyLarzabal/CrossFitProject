@@ -6,6 +6,7 @@ import { inspect } from "util";
 import styles from "../../App.module.scss";
 import Image from "../../component/Image/Image";
 import heroImg from "../../assets/img/hero.jpg";
+import Button from "../../component/Button/Button";
 
 export default function HomeScreen(): JSX.Element {
     const { container, row } = styles;
@@ -31,6 +32,11 @@ export default function HomeScreen(): JSX.Element {
         <div>
             <div>
                 <Image src={heroImg} alt={"Hero image"} size={"cover"} />
+                <div className={container}>
+                    <h1>LOREM IPSUM</h1>
+                    <p>LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT.</p>
+                    <Button label={"EN SAVOIR PLUS >>"} color={"#F58C03"} />
+                </div>
             </div>
             <div className={container}>
                 <Title text={"Nos Nouveautés"} />
