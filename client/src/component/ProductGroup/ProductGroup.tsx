@@ -25,30 +25,33 @@ const ProductGroup: FunctionComponent<Props> = (props: Props) => {
     const { grid, basic, withMainProduct, withDescription } = style;
     const [products, setProducts] = useState(list.nouveautes);
 
-    const productListRender = (): JSX.Element => {
+    const productListRender = (max: number): JSX.Element => {
         return (
             <>
-                {products.map((value) => (
-                    <ProductCard
-                        key={value.id}
-                        title={value.title}
-                        photo={value.primaryPhoto}
-                        price={value.price}
-                        url={value.productUrl}
-                        categorie={value.categorie}
-                    />
-                ))}
+                {products.map(
+                    (value, index) =>
+                        index < max && (
+                            <ProductCard
+                                key={value.id}
+                                title={value.title}
+                                photo={value.primaryPhoto}
+                                price={value.price}
+                                url={value.productUrl}
+                                categorie={value.categorie}
+                            />
+                        )
+                )}
             </>
         );
     };
 
     switch (groupType) {
         case GroupType.basic:
-            return <div className={`${grid} ${basic}`}>{productListRender()}</div>;
+            return <div className={`${grid} ${basic}`}>{productListRender(3)}</div>;
         case GroupType.withMainProduct:
-            return <div className={`${grid} ${withMainProduct}`}>{productListRender()}</div>;
+            return <div className={`${grid} ${withMainProduct}`}>{productListRender(5)}</div>;
         case GroupType.withDescription:
-            return <div className={`${grid} ${withDescription}`}>{productListRender()}</div>;
+            return <div className={`${grid} ${withDescription}`}>{productListRender(5)}</div>;
     }
 };
 
