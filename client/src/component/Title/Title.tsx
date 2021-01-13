@@ -1,4 +1,6 @@
 import React, { FunctionComponent } from "react";
+import global from "../../App.module.scss";
+import styles from "./style.module.scss";
 
 type Props = {
     text: string;
@@ -6,7 +8,13 @@ type Props = {
 
 const Title: FunctionComponent<Props> = (props: Props) => {
     const { text } = props;
-    return <h2>{text}</h2>;
+    const { row } = global;
+    const { title } = styles;
+    return (
+        <div className={row}>
+            <h2 className={title}>{text}</h2>
+        </div>
+    );
 };
 
 export default Title;

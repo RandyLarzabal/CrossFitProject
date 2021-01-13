@@ -28,8 +28,8 @@ export default function HomeScreen(): JSX.Element {
     return (
         <div>
             <div className={container}>
+                <Title text={"Nos Nouveautés"} />
                 <div className={row}>
-                    <Title text={"Nos Nouveautés"} />
                     {productListRender()}
                 </div>
             </div>
