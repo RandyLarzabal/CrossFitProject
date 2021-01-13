@@ -3,13 +3,15 @@ import list from "../../db.json";
 import { ProductCard } from "../../component";
 import Title from "../../component/Title/Title";
 import { inspect } from "util";
-import styles from "../../App.module.scss";
+import global from "../../App.module.scss";
 import Image from "../../component/Image/Image";
 import heroImg from "../../assets/img/hero.jpg";
 import Button from "../../component/Button/Button";
+import styles from "./style.module.scss";
 
 export default function HomeScreen(): JSX.Element {
-    const { container, row } = styles;
+    const { container, row } = global;
+    const { hero } = styles;
     const [products, setProducts] = useState(list);
 
     const productListRender = (): JSX.Element => {
@@ -28,9 +30,10 @@ export default function HomeScreen(): JSX.Element {
             </>
         );
     };
+
     return (
         <div>
-            <div>
+            <div className={hero}>
                 <Image src={heroImg} alt={"Hero image"} size={"cover"} />
                 <div className={container}>
                     <h1>LOREM IPSUM</h1>

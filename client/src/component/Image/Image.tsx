@@ -9,9 +9,7 @@ type ImageProps = {
 const Image: FC<ImageProps> = (props: ImageProps) => {
     const { src, alt, size } = props;
     return (
-        <div>
-            <img src={src} alt={alt} style={{backgroundSize: size, width: "100%"}} />
-        </div>
+        <img src={src} alt={alt} style={{backgroundSize: size, width: "100%"}} />
     );
 };
 
