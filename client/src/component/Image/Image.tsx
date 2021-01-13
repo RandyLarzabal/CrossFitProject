@@ -6,11 +6,11 @@ type ImageProps = {
     size: "cover" | "contain";
 };
 
-const Image: FC<ImageProps> = (props) => {
+const Image: FC<ImageProps> = (props: ImageProps) => {
     const { src, alt, size } = props;
     return (
         <div>
-            <img src="" alt="" />
+            <img src={src} alt={alt} />
         </div>
     );
 };

@@ -29,9 +29,7 @@ export default function HomeScreen(): JSX.Element {
         <div>
             <div className={container}>
                 <Title text={"Nos Nouveautés"} />
-                <div className={row}>
-                    {productListRender()}
-                </div>
+                <div className={row}>{productListRender()}</div>
             </div>
         </div>
     );
