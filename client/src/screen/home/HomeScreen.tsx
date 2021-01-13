@@ -8,31 +8,75 @@ import styles from "./style.module.scss";
 
 import ReassuranceCard from "../../component/ReassuranceGroup/ReassuranceCard/ReassuranceCard";
 
-import ProductGroup, {TypeDonnees, GroupType} from "../../component/ProductGroup/ProductGroup";
+import ProductGroup, { TypeDonnees, GroupType } from "../../component/ProductGroup/ProductGroup";
+import Icon from "../../component/Icon/Icon";
 
 export default function HomeScreen(): JSX.Element {
-    const {container, row} = global;
-    const {hero} = styles;
+    const { container, row } = global;
+    const { hero } = styles;
 
     return (
         <div>
             <div className={hero}>
-                <Image src={heroImg} alt={"Hero image"} size={"cover"}/>
+                <Image src={heroImg} alt={"Hero image"} size={"cover"} />
                 <div className={container}>
                     <h1>LOREM IPSUM</h1>
                     <p>LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT.</p>
-                    <Button label={"EN SAVOIR PLUS >>"} color={"#F58C03"}/>
+                    <Button label={"EN SAVOIR PLUS >>"} color={"#F58C03"} />
                 </div>
             </div>
 
             <div className={container}>
-                <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
                 <Title text={"Nos Nouveautés"} />
                 <ProductGroup groupType={GroupType.basic} />
-                <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
                 <Title text={"Les Tendances"} />
                 <ProductGroup groupType={GroupType.withMainProduct} />
-                <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+
                 <ProductGroup groupType={GroupType.withDescription} />
             </div>
 
