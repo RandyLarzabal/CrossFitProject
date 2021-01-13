@@ -1,10 +1,11 @@
 import React from "react";
 import styles from "./style.module.scss";
+import global from "../../../App.module.scss";
 
 export const Footer = () => {
     return (
         <footer className={styles.footer}>
-            <div className={styles.container}>
+            <div className={`${styles.container} ${global.container}`}>
                 <div className={styles.adresse}>
                     <h5>Adresse</h5>
                     <p>
@@ -27,7 +28,7 @@ export const Footer = () => {
                 </div>
                 <img src="logo.svg" alt="logo" />
             </div>
-            <div className={`${styles.container} ${styles.copyright}`}>
+            <div className={`${global.container} ${styles.copyright}`}>
                 <p>+33 7 89 58 64 75</p>
                 <p>Une création par Momo la science</p>
                 <p>fenuafitnes©2020</p>

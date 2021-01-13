@@ -1,9 +1,13 @@
 import React, { useState } from "react";
 import list from "../../db.json";
 import { ProductCard } from "../../component";
+import Title from "../../component/Title/Title";
+import { inspect } from "util";
+import styles from "../App.module.scss";
 
 export default function HomeScreen(): JSX.Element {
-    const [products, setProductq] = useState(list);
+    const { container, row } = styles;
+    const [products, setProducts] = useState(list);
 
     const productListRender = (): JSX.Element => {
         return (
@@ -21,5 +25,14 @@ export default function HomeScreen(): JSX.Element {
             </>
         );
     };
-    return <div>{productListRender()}</div>;
+    return (
+        <div>
+            <div className={container}>
+                <div className={row}>
+                    <Title text={"Nos Nouveautés"} />
+                    {productListRender()}
+                </div>
+            </div>
+        </div>
+    );
 }

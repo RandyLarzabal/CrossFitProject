@@ -21,7 +21,7 @@ export function ProductCard(props: ProductCardType): JSX.Element {
     const { title, categorie, photo, price } = props;
     return (
         <Link to={"/"} style={{ textDecoration: "none" }}>
-            <div className="productCard blackBar">
+            <div className="productCard">
                 <img src={photo.url} alt={photo.alt} />
 
                 <div className="flex">
