@@ -19,6 +19,8 @@ function App(): JSX.Element {
                         <img src="search.svg" alt="Rechercher" />
                     </div>
 
+                    <NavBar />
+
                     {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
                     <Switch>
