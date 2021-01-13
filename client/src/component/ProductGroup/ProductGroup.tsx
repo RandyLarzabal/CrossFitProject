@@ -22,6 +22,7 @@ type Props = OwnProps;
 const ProductGroup: FunctionComponent<Props> = (props: Props) => {
     const { type, groupType = GroupType.basic } = props;
     const [products, setProducts] = useState(list.nouveautes);
+
     const productListRender = (): JSX.Element => {
         return (
             <>
