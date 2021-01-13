@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/***Colors****/
+/***Fonts****/
+/***Size****/
+/***Spacing****/
+.container {
+  width: 1140px;
+  margin: auto;
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+h1 {
+  font-size: 56px;
+}
+
+.blackBar {
+  width: 100vw;
+  height: 42px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #1A1919;
+  padding-right: 50px;
+}
+
+.blackBar a {
+  height: 42px;
+  font-family: AdriannaCondensedSemiBold, sans-serif;
+  font-size: 14px;
+  padding: 0px 20px;
+  line-height: 42px;
+  color: white;
+}
+
+.blackBar a.connexion {
+  border-left: 1px solid #707070;
+  border-right: 1px solid #707070;
+}
+/*# sourceMappingURL=App.module.css.map */

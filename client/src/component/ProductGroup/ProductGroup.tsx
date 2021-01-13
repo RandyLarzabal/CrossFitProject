@@ -1,6 +1,7 @@
 import React, { FunctionComponent, useState } from "react";
 import { ProductCard } from "../ProductCard/ProductCard";
 import list from "../../db.json";
+import style from "./style.module.scss";
 
 export enum TypeDonnees {
     nouveautes,
@@ -13,7 +14,7 @@ export enum GroupType {
 }
 
 interface OwnProps {
-    type: TypeDonnees;
+    type?: TypeDonnees;
     groupType?: GroupType;
 }
 
@@ -21,6 +22,7 @@ type Props = OwnProps;
 
 const ProductGroup: FunctionComponent<Props> = (props: Props) => {
     const { type, groupType = GroupType.basic } = props;
+    const { grid, basic, withMainProduct, withDescription } = style;
     const [products, setProducts] = useState(list.nouveautes);
 
     const productListRender = (): JSX.Element => {
@@ -42,11 +44,11 @@ const ProductGroup: FunctionComponent<Props> = (props: Props) => {
 
     switch (groupType) {
         case GroupType.basic:
-            return <div style={{ display: "flex" }}>{productListRender()}</div>;
+            return <div className={`${grid} ${basic}`}>{productListRender()}</div>;
         case GroupType.withMainProduct:
-            return <div style={{ display: "flex" }}>{productListRender()}</div>;
+            return <div className={`${grid} ${withMainProduct}`}>{productListRender()}</div>;
         case GroupType.withDescription:
-            return <div style={{ display: "flex" }}>{productListRender()}</div>;
+            return <div className={`${grid} ${withDescription}`}>{productListRender()}</div>;
     }
 };
 

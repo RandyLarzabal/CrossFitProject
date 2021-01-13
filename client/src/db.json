@@ -53,6 +53,60 @@
         "url": "https://images-na.ssl-images-amazon.com/images/I/61BVQkyFurL._AC_UL1500_.jpg",
         "alt": "je suis une description"
       }
+    },
+    {
+      "id": 4,
+      "title": "Fenua Sportswear Tech",
+      "price": 104,
+      "categorie": "streetwear",
+      "stock": 10,
+      "productUrl": "un lien",
+      "photos": [
+        {
+          "url": "lien",
+          "alt": "je suis une description"
+        }
+      ],
+      "primaryPhoto": {
+        "url": "https://images-na.ssl-images-amazon.com/images/I/61BVQkyFurL._AC_UL1500_.jpg",
+        "alt": "je suis une description"
+      }
+    },
+    {
+      "id": 5,
+      "title": "Fenua Sportswear Air MAx",
+      "price": 104,
+      "categorie": "streetwear",
+      "stock": 10,
+      "productUrl": "un lien",
+      "photos": [
+        {
+          "url": "lien",
+          "alt": "je suis une description"
+        }
+      ],
+      "primaryPhoto": {
+        "url": "https://images-na.ssl-images-amazon.com/images/I/61BVQkyFurL._AC_UL1500_.jpg",
+        "alt": "je suis une description"
+      }
+    },
+    {
+      "id": 6,
+      "title": "Fenua ESC",
+      "price": 104,
+      "categorie": "streetwear",
+      "stock": 10,
+      "productUrl": "un lien",
+      "photos": [
+        {
+          "url": "lien",
+          "alt": "je suis une description"
+        }
+      ],
+      "primaryPhoto": {
+        "url": "https://images-na.ssl-images-amazon.com/images/I/61BVQkyFurL._AC_UL1500_.jpg",
+        "alt": "je suis une description"
+      }
     }
   ]
 }

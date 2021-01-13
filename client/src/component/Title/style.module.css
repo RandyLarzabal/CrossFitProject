@@ -1,0 +1,21 @@
+.title {
+  font-size: 26px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  position: relative;
+  margin: auto;
+}
+
+.title:after {
+  content: "";
+  width: 75px;
+  height: 4px;
+  background-color: #FFAD43;
+  bottom: -5px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+}
+/*# sourceMappingURL=style.module.css.map */

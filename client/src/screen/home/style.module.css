@@ -1,0 +1,35 @@
+.hero {
+  height: 800px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.hero img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  -o-object-position: center -100px;
+     object-position: center -100px;
+  z-index: -1;
+}
+
+.hero h1 {
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.hero p {
+  margin-bottom: 50px;
+  color: #fff;
+  font-size: 22px;
+}
+/*# sourceMappingURL=style.module.css.map */

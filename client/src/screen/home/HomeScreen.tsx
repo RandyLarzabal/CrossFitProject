@@ -8,7 +8,7 @@ import styles from "./style.module.scss";
 
 import ReassuranceCard from "../../component/ReassuranceCard/ReassuranceCard";
 
-import ProductGroup, { TypeDonnees } from "../../component/ProductGroup/ProductGroup";
+import ProductGroup, { TypeDonnees, GroupType } from "../../component/ProductGroup/ProductGroup";
 
 export default function HomeScreen(): JSX.Element {
     const { container, row } = global;
@@ -27,9 +27,14 @@ export default function HomeScreen(): JSX.Element {
 
             <div className={container}>
                 <Title text={"Nos Nouveautés"} />
+                {/*
                 <div className={row}>
                     <ProductGroup type={TypeDonnees.nouveautes} />
                 </div>
+                */}
+                <ProductGroup groupType={GroupType.basic} />
+                <ProductGroup groupType={GroupType.withMainProduct} />
+                <ProductGroup groupType={GroupType.withDescription} />
             </div>
 
             <div className={container}>

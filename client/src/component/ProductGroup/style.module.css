@@ -1,0 +1,17 @@
+.grid {
+  display: -ms-grid;
+  display: grid;
+}
+
+.basic {
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+}
+
+.withMainProduct {
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
+}
+/*# sourceMappingURL=style.module.css.map */
