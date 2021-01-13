@@ -3,11 +3,17 @@
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 1.3px;
+  position: relative;
+  margin: auto;
 
   &:after{
     content: "";
     width: 75px;
-    height:2px;
-    background-color: #FFAD43
+    height: 4px;
+    background-color: #FFAD43;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
   }
 }

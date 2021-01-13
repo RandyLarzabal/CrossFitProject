@@ -11,7 +11,7 @@ const Title: FunctionComponent<Props> = (props: Props) => {
     const { row } = global;
     const { title } = styles;
     return (
-        <div className={row}>
+        <div className={row} style={{ marginBottom: 65 }}>
             <h2 className={title}>{text}</h2>
         </div>
     );
