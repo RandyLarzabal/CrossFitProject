@@ -3,4 +3,8 @@
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 1.3px;
+
+  &:after{
+    content: "";
+  }
 }
