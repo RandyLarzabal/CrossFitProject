@@ -10,6 +10,12 @@
         object-fit: contain;
         object-position: center top;
         background-color: #FBFBFB;
+
+        /*
+        &:hover button {
+                transform: translate(0px);
+        }
+        */
     }
 
     .flex {

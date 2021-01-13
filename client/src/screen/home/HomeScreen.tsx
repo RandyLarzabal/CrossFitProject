@@ -26,14 +26,11 @@ export default function HomeScreen(): JSX.Element {
             </div>
 
             <div className={container}>
+                <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
                 <Title text={"Nos Nouveautés"} />
-                {/*
-                <div className={row}>
-                    <ProductGroup type={TypeDonnees.nouveautes} />
-                </div>
-                */}
                 <ProductGroup groupType={GroupType.basic} />
                 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                <Title text={"Les Tendances"} />
                 <ProductGroup groupType={GroupType.withMainProduct} />
                 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
                 <ProductGroup groupType={GroupType.withDescription} />
