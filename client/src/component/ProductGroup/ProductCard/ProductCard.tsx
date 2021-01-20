@@ -30,13 +30,14 @@ export function ProductCard(props: ProductCardType): JSX.Element {
         price: priceClass,
         bar,
         title: titleClass,
+        buttons
     } = style;
     return (
         <Link to={"/"} style={{ textDecoration: "none" }}>
             <div className={productCard}>
                 <div style={{ position: "relative" }}>
                     <img src={photo.url} alt={photo.alt} />
-                    <div /* className="buttons" */ style={{ position: "absolute", bottom: 0, left: 0, width: "100%", overflow: "hidden", transform: "translateY(45px)" }}>
+                    <div className={buttons} style={{ position: "absolute", bottom: 0, left: 0, width: "100%", overflow: "hidden", transform: "translateY(45px)" }}>
                         <button
                             style={{
                                 width: "50%",
