@@ -1,5 +1,6 @@
 import React from "react";
 import style from "./style.module.scss";
+import global from "../../../App.module.scss";
 import { Link } from "react-router-dom";
 import { colors } from "../../../assets/Colors";
 
@@ -30,13 +31,15 @@ export function ProductCard(props: ProductCardType): JSX.Element {
         price: priceClass,
         bar,
         title: titleClass,
+        buttons,
     } = style;
+    const { overflowHidden, positionRelative } = global;
     return (
         <Link to={"/"} style={{ textDecoration: "none" }}>
             <div className={productCard}>
-                <div style={{ position: "relative" }}>
+                <div className={`${overflowHidden} ${positionRelative}`}>
                     <img src={photo.url} alt={photo.alt} />
-                    <div /* className="buttons" */ style={{ position: "absolute", bottom: 0, left: 0, width: "100%", overflow: "hidden", transform: "translateY(45px)" }}>
+                    <div className={buttons}>
                         <button
                             style={{
                                 width: "50%",
@@ -48,7 +51,7 @@ export function ProductCard(props: ProductCardType): JSX.Element {
                                 fontWeight: "bold",
                                 backgroundColor: colors.black,
                             }}
-                            onClick={() => null}
+                            onClick={() => console.log("je suis clic")}
                         >
                             X Acheter
                         </button>
