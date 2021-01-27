@@ -1,56 +1,57 @@
-import React, { FunctionComponent, useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import React, { Dispatch, FunctionComponent, useState, SetStateAction } from "react";
+import { NavLink } from "react-router-dom";
 import style from "./style.module.scss";
+import { Button } from "../index";
+import { IconList } from "../Icon/Icon";
 
-interface OwnProps {}
+type Props = {
+    visibility: boolean;
+    setVisibility: Dispatch<SetStateAction<boolean>>;
+};
 
-type Props = OwnProps;
-
-const NavBar: FunctionComponent<Props> = (props) => {
-    const { navBar, button, close } = style;
-    const [visibility, setVisibility] = useState(false);
+const NavBar: FunctionComponent<Props> = (props: Props) => {
+    const { visibility, setVisibility } = props;
+    const { navBar, close } = style;
     return (
-        <>
-            <button className={button} onClick={() => setVisibility(true)}>
-                open
-            </button>
-            <div className={navBar} style={{ height: visibility ? "100vh" : 0 }}>
-                <nav>
-                    <button className={button + " " + close} onClick={() => setVisibility(false)}>
-                        X
-                    </button>
-                    <ul>
-                        <li>
-                            <NavLink to="/">Accueil</NavLink>
-                        </li>
-                        <li>
-                            <NavLink to="/homme">Homme</NavLink>
-                        </li>
-                        <li>
-                            <NavLink to="/femme">Femme</NavLink>
-                        </li>
-                        <li>
-                            <NavLink to="/Streetwear">Streetwear</NavLink>
-                        </li>
-                        <li>
-                            <NavLink to="/">Accueil</NavLink>
-                        </li>
-                        <li>
-                            <NavLink to="/homme">Homme</NavLink>
-                        </li>
-                        <li>
-                            <NavLink to="/femme">Femme</NavLink>
-                        </li>
-                        <li>
-                            <NavLink to="/Streetwear">Streetwear</NavLink>
-                        </li>
-                        <li>
-                            <NavLink to="/Streetwear">Streetwear</NavLink>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </>
+        <div className={navBar} style={{ height: visibility ? "100vh" : 0 }}>
+            <Button
+                label={""}
+                className={close}
+                handleClick={() => setVisibility(false)}
+                icon={{ icon: IconList.shop, size: 40, color: "#000000" }}
+            />
+            <nav>
+                <ul>
+                    <li>
+                        <NavLink to="/">Accueil</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/homme">Homme</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/femme">Femme</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/Streetwear">Streetwear</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/">Accueil</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/homme">Homme</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/femme">Femme</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/Streetwear">Streetwear</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/Streetwear">Streetwear</NavLink>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     );
 };
 

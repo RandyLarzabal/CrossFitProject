@@ -2,7 +2,7 @@ import React, { FunctionComponent } from "react";
 import iconSet from "../../assets/icomoon/selection.json";
 import IcomoonReact, { iconList } from "icomoon-react";
 
-enum IconList {
+export enum IconList {
     "arrow",
     "like",
     "search",
@@ -15,11 +15,12 @@ interface OwnProps {
     color: string;
 }
 
-type Props = OwnProps;
+export type IconProps = OwnProps;
 
-const Icon: FunctionComponent<Props> = (props: Props) => {
+const Icon: FunctionComponent<IconProps> = (props: IconProps) => {
     const { icon, size, color } = props;
-    return <IcomoonReact iconSet={iconSet} color={color} size={size} icon={icon} />;
+    const iconTab = ["arrow", "like", "search", "see", "shop"];
+    return <IcomoonReact iconSet={iconSet} color={color} size={size} icon={iconTab[icon]} />;
 };
 
 export default Icon;
