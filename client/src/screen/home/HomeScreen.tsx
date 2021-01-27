@@ -3,6 +3,7 @@ import { NavBar, Title } from "../../component";
 import global from "../../App.module.scss";
 import Image from "../../component/Image/Image";
 import imghero from "../../assets/img/hero.jpg";
+import logo from "../../assets/img/logo/logo-white.svg";
 import Button from "../../component/Button/Button";
 import styles from "./style.module.scss";
 
@@ -13,7 +14,7 @@ import { IconList } from "../../component/Icon/Icon";
 
 export default function HomeScreen(): JSX.Element {
     const { container } = global;
-    const { hero, button, navBar, heroImg } = styles;
+    const { hero, button, navBar, heroImg, logoImg } = styles;
 
     const [visibleNavBack, setVisibleNavBack] = useState(false);
     return (
@@ -30,6 +31,7 @@ export default function HomeScreen(): JSX.Element {
                         className={button}
                     />
                 </div>
+                <img className={logoImg} src={logo}></img>
                 <Image className={heroImg} src={imghero} alt={"Hero image"} size={"cover"} />
                 <div className={container}>
                     <h1>LOREM IPSUM</h1>

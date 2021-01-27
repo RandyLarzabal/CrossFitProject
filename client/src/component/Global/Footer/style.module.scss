@@ -7,8 +7,8 @@
     display: flex;
     justify-content: space-between;
 
-    .adresse, .suivezNous, .horaires {
-      width: 200px;
+    .adresse, .suivezNous, .horaires, img {
+      max-width: 200px;
       padding: 70px 0;
 
       h5 {
