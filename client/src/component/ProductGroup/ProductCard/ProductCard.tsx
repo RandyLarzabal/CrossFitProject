@@ -3,6 +3,8 @@ import style from "./style.module.scss";
 import global from "../../../App.module.scss";
 import { Link } from "react-router-dom";
 import { colors } from "../../../assets/Colors";
+import { Button } from "../../index";
+import { IconList } from "../../Icon/Icon";
 
 export type PhotoBasics = {
     url: string;
@@ -32,6 +34,7 @@ export default function ProductCard(props: ProductCardType): JSX.Element {
         bar,
         title: titleClass,
         buttons,
+        button,
     } = style;
     const { overflowHidden, positionRelative } = global;
     return (
@@ -40,21 +43,13 @@ export default function ProductCard(props: ProductCardType): JSX.Element {
                 <div className={`${overflowHidden} ${positionRelative}`}>
                     <img src={photo.url} alt={photo.alt} />
                     <div className={buttons}>
-                        <button
-                            style={{
-                                width: "50%",
-                                height: 45,
-                                border: "none",
-                                color: "#fff",
-                                fontSize: 11,
-                                outline: "none",
-                                fontWeight: "bold",
-                                backgroundColor: colors.black,
-                            }}
-                            onClick={() => console.log("je suis clic")}
-                        >
-                            X Acheter
-                        </button>
+                        <Button
+                            label={"Acheter"}
+                            handleClick={() => console.log("je suis clic")}
+                            className={button}
+                            icon={{ icon: IconList.shop, color: "#fff", size: 40 }}
+                        />
+
                         <button
                             style={{
                                 width: "50%",
