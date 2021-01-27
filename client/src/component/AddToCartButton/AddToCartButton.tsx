@@ -5,7 +5,7 @@ export type ProductCardType = {
     link: string;
 };
 
-export function AddToCartButton(props: ProductCardType): JSX.Element {
+export default function AddToCartButton(props: ProductCardType): JSX.Element {
     const { title, link } = props;
     return (
         <div>

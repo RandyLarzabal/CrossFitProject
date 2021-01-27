@@ -22,7 +22,7 @@ export type ProductCardType = {
     handleLike?: (product: any) => void;
 };
 
-export function ProductCard(props: ProductCardType): JSX.Element {
+export default function ProductCard(props: ProductCardType): JSX.Element {
     const { title, categorie, photo, price } = props;
     const {
         productCard,

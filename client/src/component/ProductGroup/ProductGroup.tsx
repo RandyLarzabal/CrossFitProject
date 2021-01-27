@@ -1,5 +1,5 @@
 import React, { FunctionComponent, useState } from "react";
-import { ProductCard } from "./ProductCard/ProductCard";
+import ProductCard from "./ProductCard/ProductCard";
 import list from "../../db.json";
 import style from "./style.module.scss";
 import Title from "../Title/Title";

@@ -27,7 +27,7 @@ export type ProductCardType = {
     options?: OptionsProps;
 };
 
-export function Caroussel(props: ProductCardType): JSX.Element {
+export default function Caroussel(props: ProductCardType): JSX.Element {
     const { colonnes, options } = props;
 
     const [primaryScreen, setPrimaryScreen] = useState();

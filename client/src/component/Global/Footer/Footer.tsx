@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./style.module.scss";
 import global from "../../../App.module.scss";
 
-export const Footer = () => {
+const Footer = () => {
     return (
         <footer className={styles.footer}>
             <div className={`${styles.container} ${global.container}`}>
@@ -37,4 +37,4 @@ export const Footer = () => {
     );
 };
 
-export default { Footer };
+export default  Footer ;

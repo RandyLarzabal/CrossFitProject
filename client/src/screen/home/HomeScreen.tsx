@@ -1,9 +1,7 @@
 import React, { useState } from "react";
-import { NavBar, Title } from "../../component";
+import { Button, NavBar, Title, Image } from "../../component";
 import global from "../../App.module.scss";
-import Image from "../../component/Image/Image";
 import imghero from "../../assets/img/hero.jpg";
-import Button from "../../component/Button/Button";
 import styles from "./style.module.scss";
 
 import ReassuranceCard from "../../component/ReassuranceGroup/ReassuranceCard/ReassuranceCard";

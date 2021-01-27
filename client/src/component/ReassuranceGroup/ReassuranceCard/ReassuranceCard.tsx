@@ -15,7 +15,7 @@ const ReassuranceCard: FunctionComponent<Props> = (props: Props) => {
     return (
         <div>
             {icon}
-            <span className={span}></span>
+            <span className={span} />
             <h3 className={h3}>{title}</h3>
             <p className={p}>{description}</p>
         </div>
