@@ -33,15 +33,16 @@
         margin: 23px 0 6px 0;
 
         .categorie {
+            font-family: 'Adrianna-Regular';
             font-size: 16px;
             color: #B2B2B2;
             text-transform: capitalize;
         }
 
         .price {
+            font-family: 'Adrianna-Bold';
             font-size: 14px;
             color: #222222;
-            font-weight: bold;
         }
     }
 
@@ -52,8 +53,8 @@
     }
 
     .title {
+        font-family: 'Adrianna-CondensedBold';
         margin: 10px 0px;
-        font-weight: bold;
         font-size: 22px;
         text-transform: uppercase;
         color: #222222;

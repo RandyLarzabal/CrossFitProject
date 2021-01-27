@@ -1,3 +1,5 @@
+@import 'fonts';
+
 *{
   margin: 0;
   padding: 0;
@@ -6,8 +8,8 @@
 
 body {
   overflow-x: hidden;
+  font-family: 'Adrianna-Regular', sans-serif;
 }
-
 
 /***Colors****/
 $orange: #FFAD43;
@@ -37,6 +39,8 @@ $normalSpacing: 16px;
 // Titles
 h1 {
   font-size: 56px;
+  font-family: 'Monument-UltraBold', sans-serif;
+  letter-spacing: 2.8px;
 }
 
 // Black bar
