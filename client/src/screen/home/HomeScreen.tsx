@@ -1,26 +1,36 @@
-import React from "react";
-import { Title } from "../../component";
+import React, { useState } from "react";
+import { NavBar, Title } from "../../component";
 import global from "../../App.module.scss";
 import Image from "../../component/Image/Image";
-import heroImg from "../../assets/img/hero.jpg";
-import logo from "../../assets/img/logo/logo-white.svg";
+import imghero from "../../assets/img/hero.jpg";
 import Button from "../../component/Button/Button";
 import styles from "./style.module.scss";
 
 import ReassuranceCard from "../../component/ReassuranceGroup/ReassuranceCard/ReassuranceCard";
 
-import ProductGroup, { TypeDonnees, GroupType } from "../../component/ProductGroup/ProductGroup";
-import Icon from "../../component/Icon/Icon";
+import ProductGroup, { GroupType } from "../../component/ProductGroup/ProductGroup";
+import { IconList } from "../../component/Icon/Icon";
 
 export default function HomeScreen(): JSX.Element {
-    const { container, row } = global;
-    const { hero } = styles;
+    const { container } = global;
+    const { hero, button, navBar, heroImg } = styles;
 
+    const [visibleNavBack, setVisibleNavBack] = useState(false);
     return (
         <div>
+            <NavBar setVisibility={setVisibleNavBack} visibility={visibleNavBack} />
             <div className={hero}>
-                <Image src={heroImg} alt={"Hero image"} size={"cover"} />
-                <img className="logo" src={logo} alt={"Logo"}></img>
+                <div className={navBar}>
+                    <img src="" alt="" />
+                    <Button
+                        handleClick={() => setVisibleNavBack(true)}
+                        color={""}
+                        label={""}
+                        icon={{ icon: IconList.arrow, color: "#000000", size: 40 }}
+                        className={button}
+                    />
+                </div>
+                <Image className={heroImg} src={imghero} alt={"Hero image"} size={"cover"} />
                 <div className={container}>
                     <h1>LOREM IPSUM</h1>
                     <p>LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT.</p>
@@ -78,7 +88,6 @@ export default function HomeScreen(): JSX.Element {
                 <br />
                 <br />
                 <br />
-
                 <ProductGroup groupType={GroupType.withDescription} />
             </div>
 

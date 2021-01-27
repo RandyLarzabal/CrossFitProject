@@ -3,8 +3,7 @@ import styles from "./App.module.scss";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import HomeScreen from "./screen/home/HomeScreen";
-import { Footer } from "./component/index";
-import NavBar from "./component/NavBar/NavBar";
+import { Footer } from "./component";
 //todo add a proxy to the package.json proxy:"http://localhost:3001"
 function App(): JSX.Element {
     const { blackBar } = styles;
@@ -18,8 +17,6 @@ function App(): JSX.Element {
                         <img src="cart.svg" alt="Mon panier" />
                         <img src="search.svg" alt="Rechercher" />
                     </div>
-
-                    <NavBar />
 
                     {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
