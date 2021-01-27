@@ -3,6 +3,7 @@ import { Title } from "../../component";
 import global from "../../App.module.scss";
 import Image from "../../component/Image/Image";
 import heroImg from "../../assets/img/hero.jpg";
+import logo from "../../assets/img/logo/logo-white.svg";
 import Button from "../../component/Button/Button";
 import styles from "./style.module.scss";
 
@@ -19,6 +20,7 @@ export default function HomeScreen(): JSX.Element {
         <div>
             <div className={hero}>
                 <Image src={heroImg} alt={"Hero image"} size={"cover"} />
+                <img className="logo" src={logo} alt={"Logo"}></img>
                 <div className={container}>
                     <h1>LOREM IPSUM</h1>
                     <p>LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT.</p>
