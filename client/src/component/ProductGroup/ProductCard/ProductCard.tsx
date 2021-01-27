@@ -4,7 +4,7 @@ import global from "../../../App.module.scss";
 import { Link } from "react-router-dom";
 import { colors } from "../../../assets/Colors";
 import { Button } from "../../index";
-import { IconList } from "../../Icon/Icon";
+import Icon, { IconList } from "../../Icon/Icon";
 
 export type PhotoBasics = {
     url: string;
@@ -47,29 +47,24 @@ export default function ProductCard(props: ProductCardType): JSX.Element {
                             label={"Acheter"}
                             handleClick={() => console.log("je suis clic")}
                             className={button}
-                            icon={{ icon: IconList.shop, color: "#fff", size: 40 }}
+                            color="black"
+                            icon={{ icon: IconList.shop, color: "#fff", size: 20 }}
                         />
-
-                        <button
-                            style={{
-                                width: "50%",
-                                height: 45,
-                                border: "none",
-                                color: "#fff",
-                                fontSize: 11,
-                                outline: "none",
-                                fontWeight: "bold",
-                                backgroundColor: colors.orange,
-                            }}
-                            onClick={() => null}
-                        >
-                            X Voir Plus
-                        </button>
+                        <Button
+                            label={"Voir plus"}
+                            handleClick={() => null}
+                            className={button}
+                            color={colors.orange}
+                            icon={{ icon: IconList.see, color: "#fff", size: 20 }}
+                        />
                     </div>
                 </div>
                 <div className={flex}>
                     <p className={categorieClass}>{categorie}</p>
-                    <h4 className={priceClass}>{price} €</h4>
+                    <div className={flex} style={{width: "80px"}}>
+                        <h4 className={priceClass}>{price} €</h4>
+                        <Icon icon={IconList.like} size={20} color="#E8E8E8" />
+                    </div>
                 </div>
 
                 <div className={bar} />
