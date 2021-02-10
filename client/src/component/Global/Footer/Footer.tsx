@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./style.module.scss";
 import global from "../../../App.module.scss";
-import logo from "../../../assets/img/logo/logo-white.svg";
+import Logo from "../../Logo/Logo";
 
 const Footer = () => {
     return (
@@ -27,7 +27,7 @@ const Footer = () => {
                         eirmod tempor.
                     </p>
                 </div>
-                <img src={logo} alt="logo" />
+                <Logo />
             </div>
             <div className={`${global.container} ${styles.copyright}`}>
                 <p>+33 7 89 58 64 75</p>
