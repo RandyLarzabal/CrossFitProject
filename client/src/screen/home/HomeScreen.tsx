@@ -9,6 +9,7 @@ import ReassuranceCard from "../../component/ReassuranceGroup/ReassuranceCard/Re
 
 import ProductGroup, { GroupType } from "../../component/ProductGroup/ProductGroup";
 import { IconList } from "../../component/Icon/Icon";
+import ReassuranceGroup from "../../component/ReassuranceGroup/ReassuranceGroup";
 
 export default function HomeScreen(): JSX.Element {
     const { container } = global;
@@ -39,64 +40,12 @@ export default function HomeScreen(): JSX.Element {
             </div>
 
             <div className={container}>
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
                 <Title text={"Nos Nouveautés"} />
                 <ProductGroup groupType={GroupType.basic} />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
+                <ReassuranceGroup />
                 <Title text={"Les Tendances"} />
                 <ProductGroup groupType={GroupType.withMainProduct} />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
                 <ProductGroup groupType={GroupType.withDescription} />
-            </div>
-
-            <div className={container}>
-                <ReassuranceCard
-                    icon={"oui"}
-                    title={"LIVRAISON EN 48H"}
-                    description={"Lorem ipsum dolor sit amet, consetetur sadipscing elitr"}
-                />
             </div>
         </div>
     );

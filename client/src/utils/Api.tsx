@@ -1,12 +1,22 @@
-import axios from "axios";
+import axios, { AxiosResponse } from "axios";
 const headers = {
-    "Content-Type": "application/json",
+    headers: {
+        "Content-Type": "application/json",
+        Authorization:
+            "Basic Y2tfZTllMzMxNGViYmI0MDNlMTU0NTkyYWFkOWZmMjQ2ZTMzMmY1NWRhZjpjc183YzY1ZWI2NjgyODk1NTM3ZmE4MDJkOThmM2RmMDdmZTdmYjcxMDVj",
+    },
 };
-const burl =
-    "https://my-json-server.typicode.com/RandyLarzabal/CrossFitProject/blob/master/db.json";
+const burl = "https://crossfit.antoinebrinkmans.fr/wp-json/wc/v3/";
 
 export default {
-    getChaussure: function () {
-        return axios.get(burl);
+    getNouveaute: async (category: string, per_page: number): Promise<AxiosResponse<any>> => {
+        const config = {
+            headers,
+            params: {
+                per_page: per_page,
+                category: category,
+            },
+        };
+        return await axios.get(`${burl}products`, config);
     },
 };

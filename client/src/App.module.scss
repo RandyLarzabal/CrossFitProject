@@ -1,6 +1,6 @@
 @import 'fonts';
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -11,10 +11,83 @@ body {
   font-family: 'Adrianna-Regular', sans-serif;
 }
 
+.overflowHidden {
+  overflow: hidden;
+}
+
+.positionRelative {
+  position: relative;
+}
+
+.m5 {
+  margin: 5rem
+}
+
+.m4 {
+  margin: 4rem
+}
+
+.m3 {
+  margin: 3rem
+}
+
+.m2 {
+  margin: 2rem
+}
+
+.m1 {
+  margin: 1rem
+}
+
+.mv5 {
+  margin: 5rem 0
+}
+
+.mv4 {
+  margin: 4rem 0
+}
+
+.mv3 {
+  margin: 3rem 0
+}
+
+.mv2 {
+  margin: 2rem 0
+}
+
+.mv1 {
+  margin: 1rem 0
+}
+
+.mh5{
+  margin: 0 5rem
+}
+
+.mh4{
+  margin: 0 4rem
+}
+
+.mh3{
+  margin: 0 3rem
+}
+
+.mh2{
+  margin: 0 2rem
+}
+
+.mh1{
+  margin: 0 1rem
+}
+
+.mt0{
+  margin-top: 0;
+}
+
+
+
 /***Colors****/
 $orange: #FFAD43;
 /***Fonts****/
-
 
 
 /***Size****/
@@ -73,10 +146,3 @@ h1 {
   }
 }
 
-.overflowHidden {
-  overflow: hidden;
-}
-
-.positionRelative {
-  position: relative;
-}

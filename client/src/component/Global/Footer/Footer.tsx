@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./style.module.scss";
 import global from "../../../App.module.scss";
-import logo from "../../../assets/img/logo/logo-white.svg"
+import logo from "../../../assets/img/logo/logo-white.svg";
 
 const Footer = () => {
     return (
@@ -38,4 +38,4 @@ const Footer = () => {
     );
 };
 
-export default  Footer ;
+export default Footer;

@@ -1,6 +1,7 @@
 import React, { FunctionComponent, useState } from "react";
 import ProductCard from "./ProductCard/ProductCard";
 import list from "../../db.json";
+import global from "../../App.module.scss";
 import style from "./style.module.scss";
 import Title from "../Title/Title";
 import { colors } from "../../assets/Colors";
@@ -24,8 +25,9 @@ interface OwnProps {
 type Props = OwnProps;
 
 const ProductGroup: FunctionComponent<Props> = (props: Props) => {
-    const { type, groupType = GroupType.basic } = props;
-    const { grid, basic, withMainProduct, withDescription, title } = style;
+    const { groupType = GroupType.basic } = props;
+    const { mt0 } = global;
+    const { grid, basic, withMainProduct, withDescription } = style;
     const [products, setProducts] = useState(list.nouveautes);
 
     const productListRender = (max: number): JSX.Element => {
@@ -85,7 +87,7 @@ const ProductGroup: FunctionComponent<Props> = (props: Props) => {
                 <>
                     <div className={`${grid} ${withDescription}`}>
                         <div>
-                            <Title text={"Profitez de nos promotions"} bar="left" />
+                            <Title className={mt0} text={"Profitez de nos promotions"} bar="left" />
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                 Pellentesque consectetur scelerisque metus id ultricies. Curabitur
