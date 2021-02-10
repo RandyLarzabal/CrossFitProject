@@ -3,9 +3,9 @@ import { Button, NavBar, Title, Image } from "../../component";
 import global from "../../App.module.scss";
 import imghero from "../../assets/img/hero.jpg";
 import styles from "./style.module.scss";
-import logo from "../../assets/img/logo/logo-white.svg";
 
 import ReassuranceCard from "../../component/ReassuranceGroup/ReassuranceCard/ReassuranceCard";
+import Logo from "../../component/Logo/Logo";
 
 import ProductGroup, { GroupType } from "../../component/ProductGroup/ProductGroup";
 import { IconList } from "../../component/Icon/Icon";
@@ -29,7 +29,7 @@ export default function HomeScreen(): JSX.Element {
                         className={button}
                     />
                 </div>
-                <img className={logoImg} src={logo} />
+                <Logo />
                 <Image className={heroImg} src={imghero} alt={"Hero image"} size={"cover"} />
                 <div className={container}>
                     <h1>LOREM IPSUM</h1>

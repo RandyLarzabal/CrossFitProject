@@ -61,7 +61,7 @@ export default function ProductCard(props: ProductCardType): JSX.Element {
                 </div>
                 <div className={flex}>
                     <p className={categorieClass}>{categorie}</p>
-                    <div className={flex} style={{width: "80px"}}>
+                    <div className={flex} style={{ width: "80px" }}>
                         <h4 className={priceClass}>{price} €</h4>
                         <Icon icon={IconList.like} size={20} color="#E8E8E8" />
                     </div>
