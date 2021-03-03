@@ -1,0 +1,63 @@
+// Black bar
+.blackBar {
+  width: 100vw;
+  height: 42px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #1A1919;
+  padding-right: 50px;
+
+  a {
+    height: 42px;
+    font-family: 'AdriannaCondensedDemiBold', sans-serif;
+    font-size: 14px;
+    padding: 0 20px;
+    line-height: 42px;
+    color: white;
+
+    &.connexion {
+      border-left: 1px solid #707070;
+      border-right: 1px solid #707070;
+    }
+  }
+
+  svg {
+    margin: auto 30px;
+    cursor: pointer;
+  }
+}
+
+.hero {
+  height: 800px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .navBar{
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .heroImg {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-position: center -100px;
+    z-index: -1;
+  }
+
+  h1 {
+    margin-bottom: 10px;
+    color: #fff;
+  }
+
+  p {
+    margin-bottom: 50px;
+    color: #fff;
+    font-family: 'Adrianna-CondenseBold';
+    font-size: 22px;
+  }
+}

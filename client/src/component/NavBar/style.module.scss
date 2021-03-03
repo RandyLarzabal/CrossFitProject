@@ -31,6 +31,26 @@
   }
 }
 
+.menu {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  width: 50vw;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+
+  a {
+    height: 42px;
+    font-family: 'AdriannaCondensedBold', sans-serif;
+    font-size: 16px;
+    line-height: 42px;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+}
+
 .button {
   background: none;
   color: inherit;
