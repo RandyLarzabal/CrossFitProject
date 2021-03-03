@@ -13,7 +13,7 @@ import ReassuranceGroup from "../../component/ReassuranceGroup/ReassuranceGroup"
 
 export default function HomeScreen(): JSX.Element {
     const { container } = global;
-    const { hero, button, navBar, heroImg, logoImg } = styles;
+    const { hero, button, navBar, heroImg, logoImg, greyBg } = styles;
 
     const [visibleNavBack, setVisibleNavBack] = useState(false);
     return (
@@ -42,11 +42,21 @@ export default function HomeScreen(): JSX.Element {
             <div className={container}>
                 <Title text={"Nos Nouveautés"} />
                 <ProductGroup groupType={GroupType.basic} />
-                <ReassuranceGroup />
+            </div>
+                <div className={greyBg}>
+                    <div className={container}>
+                        <ReassuranceGroup />
+                    </div>
+                </div>
+            <div className={container}>
                 <Title text={"Les Tendances"} />
                 <ProductGroup groupType={GroupType.withMainProduct} />
-                <ProductGroup groupType={GroupType.withDescription} />
             </div>
+                <div className={greyBg}>
+                    <div className={container}>
+                        <ProductGroup groupType={GroupType.withDescription} />
+                    </div>
+                </div>
         </div>
     );
 }

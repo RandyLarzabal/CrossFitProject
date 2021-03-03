@@ -10,33 +10,33 @@ const ReassuranceGroup: FunctionComponent<Props> = (props: Props) => {
 
     return (
         <>
-            <div className={`${row} ${mv5}`}>
+            <div className={`${row}`}>
                 <ReassuranceCard
                     icon={IconList.shop}
-                    title={"title"}
+                    title={"LIVRAISON EN 48H"}
                     description={
-                        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus architecto cupiditate dignissimos, error impedit, ipsum iste laudantium maxime, mollitia necessitatibus nemo quae quos sunt unde velit vero vitae! Quod, voluptatem!"
+                        "Lorem ipsum dolor sit amet, consetetur sadipscing elitr"
                     }
                 />
                 <ReassuranceCard
                     icon={IconList.shop}
-                    title={"title"}
+                    title={"LIVRAISON EN 48H"}
                     description={
-                        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus architecto cupiditate dignissimos, error impedit, ipsum iste laudantium maxime, mollitia necessitatibus nemo quae quos sunt unde velit vero vitae! Quod, voluptatem!"
+                        "Lorem ipsum dolor sit amet, consetetur sadipscing elitr"
                     }
                 />
                 <ReassuranceCard
                     icon={IconList.shop}
-                    title={"title"}
+                    title={"LIVRAISON EN 48H"}
                     description={
-                        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus architecto cupiditate dignissimos, error impedit, ipsum iste laudantium maxime, mollitia necessitatibus nemo quae quos sunt unde velit vero vitae! Quod, voluptatem!"
+                        "Lorem ipsum dolor sit amet, consetetur sadipscing elitr"
                     }
                 />
                 <ReassuranceCard
                     icon={IconList.shop}
-                    title={"title"}
+                    title={"LIVRAISON EN 48H"}
                     description={
-                        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus architecto cupiditate dignissimos, error impedit, ipsum iste laudantium maxime, mollitia necessitatibus nemo quae quos sunt unde velit vero vitae! Quod, voluptatem!"
+                        "Lorem ipsum dolor sit amet, consetetur sadipscing elitr"
                     }
                 />
             </div>
