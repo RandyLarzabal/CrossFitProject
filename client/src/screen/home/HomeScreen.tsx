@@ -26,7 +26,7 @@ export default function HomeScreen(): JSX.Element {
                         handleClick={() => setVisibleNavBack(true)}
                         color={""}
                         label={""}
-                        icon={{ icon: IconList.SVG_1, color: "#FFF", size: 40 }}
+                        icon={{ icon: IconList.menu, color: "#FFF", size: 40 }}
                         className={button}
                     />
                 </div>
