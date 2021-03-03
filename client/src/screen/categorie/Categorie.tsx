@@ -1,14 +1,18 @@
 import React, { useState } from "react";
-import global from "../../App.module.scss";
 import styles from "./style.module.scss";
 
 import Logo from "../../component/Logo/Logo";
+import {Container} from "../../component/ui/Template/Container";
+import {ProductGroup} from "../../component";
 
 export default function HomeScreen(): JSX.Element {
-    const { container } = global;
-    const {  } = styles;
+    const {} = styles;
 
-    return (
-        <Logo />
+    return(
+        <div>
+            <Container>
+                <ProductGroup />
+            </Container>
+        </div>
     );
 }

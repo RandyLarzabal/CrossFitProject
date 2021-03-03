@@ -51,7 +51,7 @@ function App(): JSX.Element {
                         <Route exact path="/">
                             <HomeScreen />
                         </Route>
-                        <Route path="/categorie">
+                        <Route path="/homme">
                             <Categorie />
                         </Route>
                         <Route exact path="/about" />
