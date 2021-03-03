@@ -3,25 +3,25 @@ import { Button, NavBar, Title, Image } from "../../component";
 import global from "../../App.module.scss";
 import imghero from "../../assets/img/hero.jpg";
 import styles from "./style.module.scss";
+
+import ReassuranceCard from "../../component/ReassuranceGroup/ReassuranceCard/ReassuranceCard";
 import Logo from "../../component/Logo/Logo";
 
 import ProductGroup, { GroupType } from "../../component/ProductGroup/ProductGroup";
 import { IconList } from "../../component/Icon/Icon";
 import ReassuranceGroup from "../../component/ReassuranceGroup/ReassuranceGroup";
-import { Container } from "../../component/ui/Template/Container";
 
 export default function HomeScreen(): JSX.Element {
     const { container } = global;
-    const { hero, button, navBar, heroImg, logoImg } = styles;
+    const { hero, button, navBar, heroImg, logoImg, greyBg } = styles;
 
     const [visibleNavBack, setVisibleNavBack] = useState(false);
-
     return (
         <div>
             <NavBar setVisibility={setVisibleNavBack} visibility={visibleNavBack} />
             <div className={hero}>
                 <div className={navBar}>
-                    <Logo />
+                    <img src="" alt="" />
                     <Button
                         handleClick={() => setVisibleNavBack(true)}
                         color={""}
@@ -30,6 +30,7 @@ export default function HomeScreen(): JSX.Element {
                         className={button}
                     />
                 </div>
+                <Logo />
                 <Image className={heroImg} src={imghero} alt={"Hero image"} size={"cover"} />
                 <div className={container}>
                     <h1>LOREM IPSUM</h1>
@@ -38,14 +39,24 @@ export default function HomeScreen(): JSX.Element {
                 </div>
             </div>
 
-            <Container>
+            <div className={container}>
                 <Title text={"Nos Nouveautés"} />
                 <ProductGroup groupType={GroupType.basic} />
-                <ReassuranceGroup />
+            </div>
+            <div className={greyBg}>
+                <div className={container}>
+                    <ReassuranceGroup />
+                </div>
+            </div>
+            <div className={container}>
                 <Title text={"Les Tendances"} />
                 <ProductGroup groupType={GroupType.withMainProduct} />
-                <ProductGroup groupType={GroupType.withDescription} />
-            </Container>
+            </div>
+            <div className={greyBg}>
+                <div className={container}>
+                    <ProductGroup groupType={GroupType.withDescription} />
+                </div>
+            </div>
         </div>
     );
 }
