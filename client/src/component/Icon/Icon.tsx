@@ -8,7 +8,7 @@ export enum IconList {
     "search",
     "see",
     "shop",
-    "SVG_1",
+    "menu",
 }
 
 interface OwnProps {
@@ -22,7 +22,7 @@ export type IconProps = OwnProps;
 const Icon: FunctionComponent<IconProps> = (props: IconProps) => {
     console.log(iconList(iconSet));
     const { icon, size, color } = props;
-    const iconTab = ["arrow", "like", "search", "see", "shop"];
+    const iconTab = ["arrow", "like", "search", "see", "shop", "menu"];
     return <IcomoonReact iconSet={iconSet} color={color} size={size} icon={iconTab[icon]} />;
 };
 
