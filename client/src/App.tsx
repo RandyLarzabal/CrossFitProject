@@ -16,25 +16,25 @@ function App(): JSX.Element {
                     <div className={blackBar}>
                         <ul className={menu}>
                             <li>
-                                <a href="#">Accueil</a>
+                                <a href="/">Accueil</a>
                             </li>
                             <li>
-                                <a href="#">Homme</a>
+                                <a href="/categorie/homme">Homme</a>
                                 <span>^</span>
                             </li>
                             <li>
-                                <a href="#">Femme</a>
+                                <a href="/categorie/femme">Femme</a>
                                 <span>^</span>
                             </li>
                             <li>
-                                <a href="#">Enfants</a>
+                                <a href="/categorie/enfant">Enfant</a>
                                 <span>^</span>
                             </li>
                             <li>
-                                <a href="#">Nouveautés</a>
+                                <a href="/categorie/nouveautes">Nouveautés</a>
                             </li>
                             <li>
-                                <a href="#">Recrutement</a>
+                                <a href="/recrutement">Recrutement</a>
                             </li>
                         </ul>
                         <div>
@@ -51,7 +51,7 @@ function App(): JSX.Element {
                         <Route exact path="/">
                             <HomeScreen />
                         </Route>
-                        <Route path="/homme">
+                        <Route path="/categorie/homme">
                             <Categorie />
                         </Route>
                         <Route exact path="/about" />
