@@ -27,7 +27,7 @@ export default function CategorieScreen({
 
     useEffect(() => {
         commerce.products
-            .list({ "category_slug.*": category_slug })
+            .list({ category_slug: [category_slug] })
             .then((products: { data: any }) => {
                 setProducts(products.data);
             })

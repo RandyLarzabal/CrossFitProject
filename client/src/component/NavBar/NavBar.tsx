@@ -11,8 +11,8 @@ type Props = {
 };
 
 const NavBar: FunctionComponent<Props> = (props: Props) => {
-    const { visibility, setVisibility, location } = props;
-    const { navBar, close, menu } = style;
+    const { visibility, setVisibility } = props;
+    const { navBar, close } = style;
 
     return (
         <div className={navBar} style={{ height: visibility ? "100vh" : 0 }}>
