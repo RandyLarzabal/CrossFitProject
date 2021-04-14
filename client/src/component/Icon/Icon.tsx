@@ -9,6 +9,7 @@ export enum IconList {
     "see",
     "shop",
     "menu",
+    "cross",
 }
 
 interface OwnProps {

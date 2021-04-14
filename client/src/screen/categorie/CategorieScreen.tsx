@@ -36,7 +36,6 @@ export default function CategorieScreen({
             });
     }, [category_slug]);
 
-
     return (
         <CategorieS>
             <Container>
