@@ -17,28 +17,28 @@ function App(): JSX.Element {
                         <HomeScreen />
                     </Route>
                     <Route path="/homme">
-                        <Categorie category_slug="Homme" />
+                        <Categorie category_slug="homme" category_label={"Homme"} />
                     </Route>
                     <Route path="/femme">
-                        <Categorie category_slug="Femme" />
+                        <Categorie category_slug="femme" category_label={"Femme"} />
                     </Route>
                     <Route path="/streetwear">
-                        <Categorie category_slug="Streetwear" />
+                        <Categorie category_slug="streetwear" category_label={"Streetwear"} />
                     </Route>
                     <Route path="/accessoire">
-                        <Categorie category_slug="Accessoire" />
+                        <Categorie category_slug="accessoire" category_label={"Accessoire"} />
                     </Route>
                     <Route path="/edition-limite">
-                        <Categorie category_slug="Edition Limité" />
+                        <Categorie category_slug="edition Limité" category_label={"Edition Limité"} />
                     </Route>
                     <Route path="/promotion">
-                        <Categorie category_slug="Promotion" />
+                        <Categorie category_slug="promotion" category_label={"Promotion"} />
                     </Route>
                     <Route path="/enfant">
-                        <Categorie category_slug="Enfant" />
+                        <Categorie category_slug="enfant" category_label={"Enfant"} />
                     </Route>
                     <Route path="/contact">
-                        <Categorie category_slug="Contact" />
+                        <Categorie category_slug="contact" category_label={"Contact"} />
                     </Route>
                     <Route exact path="/about" />
                 </Switch>
