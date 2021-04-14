@@ -1,4 +1,4 @@
-import React, {Dispatch, FunctionComponent, SetStateAction, useEffect} from "react";
+import React, { Dispatch, FunctionComponent, SetStateAction } from "react";
 import { NavLink } from "react-router-dom";
 import style from "./style.module.scss";
 import { Button } from "../index";

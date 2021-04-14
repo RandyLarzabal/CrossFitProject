@@ -15,41 +15,35 @@ import { ProductCard } from "../../component";
 import { Filter } from "../../component/Filter";
 import { commerce } from "../../utils/Api";
 
-export default function CategorieScreen({ category_slug }: { category_slug: string }): JSX.Element {
+export default function CategorieScreen({
+    category_slug,
+    category_label,
+}: {
+    category_slug: string;
+    category_label: string;
+}): JSX.Element {
     const [filters, setFilters] = useState<{ filterKey: number; value: string }[]>([]);
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
         commerce.products
-            .list()
+            .list({ "category_slug.*": category_slug })
             .then((products: { data: any }) => {
                 setProducts(products.data);
             })
             .catch((error: any) => {
                 console.log("There was an error fetching the products", error);
             });
-    }, []);
-
-    useEffect(() => {
-        const rangePrice = filters.filter((value) => value.filterKey === 2)[0];
-        commerce.products
-            .list()
-            .then((products: { data: any }) => {
-                setProducts(products.data);
-            })
-            .catch((error: any) => {
-                console.log("There was an error fetching the products", error);
-            });
-    }, [filters]);
+    }, [category_slug]);
 
     return (
         <CategorieS>
             <Container>
                 <Row>
-                    <CategorieTitle>{category_slug}</CategorieTitle>
+                    <CategorieTitle>{category_label}</CategorieTitle>
                 </Row>
                 <Row>
-                    <CategorieAriane>Accueil / {category_slug}</CategorieAriane>
+                    <CategorieAriane>Accueil / {category_label}</CategorieAriane>
                 </Row>
                 <Row>
                     <CategorieResults>
