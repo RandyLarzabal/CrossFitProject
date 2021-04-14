@@ -20,9 +20,9 @@ const NavBar: FunctionComponent<Props> = (props: Props) => {
                 label={""}
                 className={close}
                 handleClick={() => setVisibility(false)}
-                icon={{ icon: IconList.shop, size: 40, color: "#000000" }}
+                icon={{ icon: IconList.cross, size: 40, color: "#000000" }}
             />
-            <nav>
+            <nav onClick={() => setVisibility(false)}>
                 <ul>
                     <li>
                         <NavLink to="/">Accueil</NavLink>
