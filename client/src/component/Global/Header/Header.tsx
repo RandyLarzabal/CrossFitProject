@@ -38,7 +38,7 @@ const Header: FC = () => {
                             icon={IconList.menu}
                             size={40}
                             color={"#fff"}
-                            onClick={() => setVisibleNavBack((value) => !value)}
+                            onClick={() => setVisibleNavBack(true)}
                         />
                     </HeaderContainer>
                 </HeaderS>
