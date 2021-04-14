@@ -17,7 +17,28 @@ function App(): JSX.Element {
                         <HomeScreen />
                     </Route>
                     <Route path="/homme">
-                        <Categorie category_slug="homme" />
+                        <Categorie category_slug="Homme" />
+                    </Route>
+                    <Route path="/femme">
+                        <Categorie category_slug="Femme" />
+                    </Route>
+                    <Route path="/streetwear">
+                        <Categorie category_slug="Streetwear" />
+                    </Route>
+                    <Route path="/accessoire">
+                        <Categorie category_slug="Accessoire" />
+                    </Route>
+                    <Route path="/edition-limite">
+                        <Categorie category_slug="Edition Limité" />
+                    </Route>
+                    <Route path="/promotion">
+                        <Categorie category_slug="Promotion" />
+                    </Route>
+                    <Route path="/enfant">
+                        <Categorie category_slug="Enfant" />
+                    </Route>
+                    <Route path="/contact">
+                        <Categorie category_slug="Contact" />
                     </Route>
                     <Route exact path="/about" />
                 </Switch>

@@ -33,7 +33,7 @@ const Header: FC = () => {
                         location={"/"}
                     />
                     <HeaderContainer>
-                        <Logo />
+                        <Logo version={"white"} />
                         <Icon
                             icon={IconList.menu}
                             size={40}
@@ -62,7 +62,7 @@ const Header: FC = () => {
                         location={"/"}
                     />
                     <HeaderContainer>
-                        <Logo />
+                        <Logo version={"black"} />
                         <Icon
                             icon={IconList.menu}
                             size={40}

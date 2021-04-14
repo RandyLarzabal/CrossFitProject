@@ -32,28 +32,28 @@ const NavBar: FunctionComponent<Props> = (props: Props) => {
                                 <NavLink to="/">Accueil</NavLink>
                             </li>
                             <li>
-                                <NavLink to="/homme" >Homme</NavLink>
-                            </li>
-                            <li>
-                                <NavLink to="/femme">Femme</NavLink>
-                            </li>
-                            <li>
-                                <NavLink to="/Streetwear">Streetwear</NavLink>
-                            </li>
-                            <li>
-                                <NavLink to="/">Accueil</NavLink>
-                            </li>
-                            <li>
                                 <NavLink to="/homme">Homme</NavLink>
                             </li>
                             <li>
                                 <NavLink to="/femme">Femme</NavLink>
                             </li>
                             <li>
-                                <NavLink to="/Streetwear">Streetwear</NavLink>
+                                <NavLink to="/streetwear">Streetwear</NavLink>
                             </li>
                             <li>
-                                <NavLink to="/Streetwear">Streetwear</NavLink>
+                                <NavLink to="/accessoire">Accessoire</NavLink>
+                            </li>
+                            <li>
+                                <NavLink to="/edition-limite">Edition Limité</NavLink>
+                            </li>
+                            <li>
+                                <NavLink to="/promotion">Promotion</NavLink>
+                            </li>
+                            <li>
+                                <NavLink to="/enfant">Enfant</NavLink>
+                            </li>
+                            <li>
+                                <NavLink to="/contact">Contact</NavLink>
                             </li>
                         </ul>
                     </nav>

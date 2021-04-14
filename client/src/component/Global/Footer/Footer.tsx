@@ -27,7 +27,7 @@ const Footer = () => {
                         eirmod tempor.
                     </p>
                 </div>
-                <Logo />
+                <Logo  version={"white"}/>
             </div>
             <div className={`${global.container} ${styles.copyright}`}>
                 <p>+33 7 89 58 64 75</p>

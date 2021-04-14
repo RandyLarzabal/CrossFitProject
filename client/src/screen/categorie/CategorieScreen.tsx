@@ -15,19 +15,13 @@ import { ProductCard } from "../../component";
 import { Filter } from "../../component/Filter";
 import { commerce } from "../../utils/Api";
 
-
-export default function CategorieScreen({category_slug}:{category_slug:string}): JSX.Element {
+export default function CategorieScreen({ category_slug }: { category_slug: string }): JSX.Element {
     const [filters, setFilters] = useState<{ filterKey: number; value: string }[]>([]);
     const [products, setProducts] = useState([]);
 
-
-
     useEffect(() => {
-
-
-
         commerce.products
-            .list({ category_id: category_slug })
+            .list()
             .then((products: { data: any }) => {
                 setProducts(products.data);
             })
@@ -38,19 +32,29 @@ export default function CategorieScreen({category_slug}:{category_slug:string}):
 
     useEffect(() => {
         const rangePrice = filters.filter((value) => value.filterKey === 2)[0];
+        commerce.products
+            .list()
+            .then((products: { data: any }) => {
+                setProducts(products.data);
+            })
+            .catch((error: any) => {
+                console.log("There was an error fetching the products", error);
+            });
     }, [filters]);
 
     return (
         <CategorieS>
             <Container>
                 <Row>
-                    <CategorieTitle>Homme</CategorieTitle>
+                    <CategorieTitle>{category_slug}</CategorieTitle>
                 </Row>
                 <Row>
-                    <CategorieAriane>Accueil / Homme</CategorieAriane>
+                    <CategorieAriane>Accueil / {category_slug}</CategorieAriane>
                 </Row>
                 <Row>
-                    <CategorieResults>Showing 1-12 of 78 results</CategorieResults>
+                    <CategorieResults>
+                        Showing 1-{products.length} of {products.length} results
+                    </CategorieResults>
                 </Row>
                 <CategorieMainContent>
                     <CategorieFiltersContainer>
@@ -88,7 +92,6 @@ export default function CategorieScreen({category_slug}:{category_slug:string}):
                                 filterKey={4}
                             />
                         </div>
-
                     </CategorieFiltersContainer>
                     <CategorieProductContainer>
                         {products.map((value: any) => (
