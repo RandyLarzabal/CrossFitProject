@@ -38,11 +38,13 @@ const ProductGroup: FunctionComponent<Props> = (props: Props) => {
                         index < max && (
                             <ProductCard
                                 key={value.id}
-                                title={value.title}
-                                photo={value.primaryPhoto}
-                                price={value.price}
-                                url={value.productUrl}
-                                categorie={value.categorie}
+                                item={{
+                                    title: value.title,
+                                    photo: value.primaryPhoto,
+                                    price: value.price,
+                                    url: value.productUrl,
+                                    categorie: value.categorie,
+                                }}
                                 handleLike={onLike}
                                 handleBuy={onBuy}
                                 handleSeeMore={onSeeMore}

@@ -20,10 +20,25 @@ const HeaderBlackBarLink = styled.a`
     color: white;
     padding: 0 20px;
     cursor: pointer;
+    position: relative;
 
     &.separator {
         border-left: 1px solid white;
         border-right: 1px solid white;
+    }
+
+    & > div {
+      background-color: rgb(245,140,3);
+      position: absolute;
+      height: 20px;
+      line-height: initial;
+      width: 20px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      right: 6px;
+      top: 19px;
     }
 `;
 
