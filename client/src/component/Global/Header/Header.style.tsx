@@ -38,5 +38,6 @@ const HeaderContainer = styled.div`
     justify-content: space-between;
     svg {
         cursor: pointer;
+        z-index: 20;
     }
 `;
