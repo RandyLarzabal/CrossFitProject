@@ -1,39 +1,42 @@
-import React, { useState } from "react";
-import { Button, NavBar, Title, Image } from "../../component";
-import global from "../../App.module.scss";
-
-import styles from "./style.module.scss";
-
+import React from "react";
+import { Button, Title, Image } from "../../component";
 
 import ProductGroup, { GroupType } from "../../component/ProductGroup/ProductGroup";
 
 import ReassuranceGroup from "../../component/ReassuranceGroup/ReassuranceGroup";
+import { Container } from "../../component/ui/Template/Container";
 
+import imghero from "../../assets/img/hero.jpg";
+import { HomeGreyBg, HomeHero, HomeS } from "./HomeScreen.style";
 export default function HomeScreen(): JSX.Element {
-    const { container } = global;
-    const { hero, button, navBar, heroImg, logoImg, greyBg } = styles;
-
-
     return (
-        <div>
-            <div className={container}>
+        <HomeS>
+            <HomeHero>
+                <Image src={imghero} alt={"Hero image"} size={"cover"} />
+                <Container>
+                    <h1>LOREM IPSUM</h1>
+                    <p>LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT.</p>
+                    <Button label={"EN SAVOIR PLUS >>"} color={"#F58C03"} />
+                </Container>
+            </HomeHero>
+            <Container>
                 <Title text={"Nos Nouveautés"} />
                 <ProductGroup groupType={GroupType.basic} />
-            </div>
-            <div className={greyBg}>
-                <div className={container}>
+            </Container>
+            <HomeGreyBg>
+                <Container>
                     <ReassuranceGroup />
-                </div>
-            </div>
-            <div className={container}>
+                </Container>
+            </HomeGreyBg>
+            <Container>
                 <Title text={"Les Tendances"} />
                 <ProductGroup groupType={GroupType.withMainProduct} />
-            </div>
-            <div className={greyBg}>
-                <div className={container}>
+            </Container>
+            <HomeGreyBg>
+                <Container>
                     <ProductGroup groupType={GroupType.withDescription} />
-                </div>
-            </div>
-        </div>
+                </Container>
+            </HomeGreyBg>
+        </HomeS>
     );
 }

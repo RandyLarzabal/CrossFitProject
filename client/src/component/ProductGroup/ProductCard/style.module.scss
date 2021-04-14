@@ -20,17 +20,15 @@
     img {
         width: 100%;
         height: 75%;
-        max-height: 259px;
         object-fit: contain;
         object-position: center top;
-        background-color: #FBFBFB;
     }
 
     .flex {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin: 23px 0 6px 0;
+        margin: 20px 0 6px 0;
 
         .categorie {
             font-family: 'Adrianna-Regular';

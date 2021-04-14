@@ -1,17 +1,17 @@
-.hero {
+import styled from "styled-components";
+
+export { HomeS, HomeHero, HomeGreyBg };
+const HomeS = styled.main``;
+
+const HomeHero = styled.div`
     height: 800px;
+    margin-top: -80px;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
 
-    .navBar{
-        padding: 0 1rem;
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .heroImg {
+    img {
         position: absolute;
         height: 100%;
         width: 100%;
@@ -27,28 +27,13 @@
     p {
         margin-bottom: 50px;
         color: #fff;
-        font-family: 'Adrianna-CondenseBold';
+        font-family: "Adrianna-CondenseBold", sans-serif;
         font-size: 22px;
     }
-}
+`;
 
-.button{
-    width:auto;
-    background-color: transparent;
-    position: absolute;
-    top: 30px;
-    right: 50px;
-}
-
-.logoImg {
-    height: 60px;
-    position: absolute;
-    top: 30px;
-    left: 50px;
-}
-
-.greyBg {
+const HomeGreyBg = styled.div`
     margin-top: 100px;
     padding: 100px 0;
-    background-color: #FBFBFB;
-}
+    background-color: #fbfbfb;
+`;

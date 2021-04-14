@@ -1,4 +1,4 @@
-import React, { Dispatch, FunctionComponent, SetStateAction } from "react";
+import React, {Dispatch, FunctionComponent, SetStateAction, useEffect} from "react";
 import { NavLink } from "react-router-dom";
 import style from "./style.module.scss";
 import { Button } from "../index";
@@ -12,7 +12,9 @@ type Props = {
 
 const NavBar: FunctionComponent<Props> = (props: Props) => {
     const { visibility, setVisibility, location } = props;
-    const { navBar, close , menu } = style;
+    const { navBar, close, menu } = style;
+
+
 
     switch (location) {
         case "/":
@@ -30,7 +32,7 @@ const NavBar: FunctionComponent<Props> = (props: Props) => {
                                 <NavLink to="/">Accueil</NavLink>
                             </li>
                             <li>
-                                <NavLink to="/homme">Homme</NavLink>
+                                <NavLink to="/homme" >Homme</NavLink>
                             </li>
                             <li>
                                 <NavLink to="/femme">Femme</NavLink>

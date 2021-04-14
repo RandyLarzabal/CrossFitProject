@@ -22,10 +22,11 @@ export type ProductCardType = {
     handleBuy?: (product: any) => void;
     handleSeeMore?: (product: any) => void;
     handleLike?: (product: any) => void;
+    className?: string;
 };
 
 export default function ProductCard(props: ProductCardType): JSX.Element {
-    const { title, categorie, photo, price } = props;
+    const { title, categorie, photo, price, className } = props;
     const {
         productCard,
         flex,
@@ -38,8 +39,8 @@ export default function ProductCard(props: ProductCardType): JSX.Element {
     } = style;
     const { overflowHidden, positionRelative } = global;
     return (
-        <Link to={"/"} style={{ textDecoration: "none" }}>
-            <div className={productCard}>
+        <Link className={` ${className}`} to={"/"} style={{ textDecoration: "none" }}>
+            <div className={` ${productCard} `}>
                 <div className={`${overflowHidden} ${positionRelative}`}>
                     <img src={photo.url} alt={photo.alt} />
                     <div className={buttons}>
