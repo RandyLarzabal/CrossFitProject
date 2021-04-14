@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { colors } from "../../../assets/Colors";
 import { Button } from "../../index";
 import Icon, { IconList } from "../../Icon/Icon";
+import { usePaymentContext } from "../../../context/PaymentContext";
 
 export type PhotoBasics = {
     url: string;
@@ -12,13 +13,15 @@ export type PhotoBasics = {
 };
 
 export type ProductCardType = {
-    title: string;
-    description?: string;
-    photo: PhotoBasics;
-    categorie?: string;
-    price: number;
-    url: string;
-    rating?: number;
+    item: {
+        title: string;
+        description?: string;
+        photo: PhotoBasics;
+        categorie?: string;
+        price: number;
+        url: string;
+        rating?: number;
+    };
     handleBuy?: (product: any) => void;
     handleSeeMore?: (product: any) => void;
     handleLike?: (product: any) => void;
@@ -26,7 +29,11 @@ export type ProductCardType = {
 };
 
 export default function ProductCard(props: ProductCardType): JSX.Element {
-    const { title, categorie, photo, price, className } = props;
+    const {
+        item: { title, categorie, photo, price },
+        className,
+    } = props;
+
     const {
         productCard,
         flex,
@@ -38,6 +45,9 @@ export default function ProductCard(props: ProductCardType): JSX.Element {
         button,
     } = style;
     const { overflowHidden, positionRelative } = global;
+
+    const { addToChart } = usePaymentContext();
+
     return (
         <Link className={` ${className}`} to={"/"} style={{ textDecoration: "none" }}>
             <div className={` ${productCard} `}>
@@ -46,7 +56,7 @@ export default function ProductCard(props: ProductCardType): JSX.Element {
                     <div className={buttons}>
                         <Button
                             label={"Acheter"}
-                            handleClick={() => console.log("je suis clic")}
+                            handleClick={() => addToChart?.(props.item)}
                             className={button}
                             color="black"
                             icon={{ icon: IconList.shop, color: "#fff", size: 20 }}

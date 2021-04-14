@@ -92,14 +92,15 @@ export default function CategorieScreen({
                             <ProductCard
                                 key={value.id}
                                 className={"col-lg-4"}
-                                title={value.name}
-                                photo={{ url: "https://picsum.photos/200/300" }}
-                                price={value.price.raw}
-                                url={""}
-                                categorie={
-                                    value.categories.length > 0 ? value.categories[0].name : ""
-                                }
-                                description={value.description}
+                                item={{
+                                    title: value.name,
+                                    photo: { url: "https://picsum.photos/200/300" },
+                                    price: value.price.raw,
+                                    url: "",
+                                    categorie:
+                                        value.categories.length > 0 ? value.categories[0].name : "",
+                                    description: value.description,
+                                }}
                             />
                         ))}
                     </CategorieProductContainer>

@@ -5,12 +5,15 @@ import Icon, { IconList } from "../../Icon/Icon";
 import { Button, NavBar } from "../../index";
 import Logo from "../../Logo/Logo";
 import { HeaderBlackBar, HeaderBlackBarLink, HeaderContainer, HeaderS } from "./Header.style";
+import { usePaymentContext } from "../../../context/PaymentContext";
 
 const Header: FC = () => {
     const { blackBar } = styles;
     const { pathname } = useLocation();
 
     const { hero, button, navBar, heroImg } = styles;
+
+    const { chart } = usePaymentContext();
 
     const [visibleNavBack, setVisibleNavBack] = useState(false);
     switch (pathname) {
@@ -22,6 +25,7 @@ const Header: FC = () => {
                         <HeaderBlackBarLink className={"separator"}>CONNEXION</HeaderBlackBarLink>
                         <HeaderBlackBarLink>
                             <Icon icon={IconList.shop} size={25} color="#fff" />
+                            <div>{chart.length}</div>
                         </HeaderBlackBarLink>
                         <HeaderBlackBarLink>
                             <Icon icon={IconList.search} size={20} color="#fff" />
@@ -51,6 +55,7 @@ const Header: FC = () => {
                         <HeaderBlackBarLink className={"separator"}>CONNEXION</HeaderBlackBarLink>
                         <HeaderBlackBarLink>
                             <Icon icon={IconList.shop} size={25} color="#fff" />
+                            <div>{chart.length}</div>
                         </HeaderBlackBarLink>
                         <HeaderBlackBarLink>
                             <Icon icon={IconList.search} size={20} color="#fff" />

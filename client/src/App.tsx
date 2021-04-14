@@ -5,13 +5,15 @@ import HomeScreen from "./screen/home/HomeScreen";
 import Categorie from "./screen/categorie/CategorieScreen";
 import { Footer, Header } from "./component";
 import DetailScreen from "./screen/detail/DetailScreen";
+import { PaymentProvider } from "./context/PaymentContext";
 //todo add a proxy to the package.json proxy:"http://localhost:3001"
 function App(): JSX.Element {
     return (
         <>
             <Router>
-                <Header />
-                {/* A <Switch> looks through its children <Route>s and
+                <PaymentProvider>
+                    <Header />
+                    {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
                 <Switch>
                     <Route exact path="/">
@@ -48,6 +50,7 @@ function App(): JSX.Element {
                 </Switch>
 
                 <Footer />
+                </PaymentProvider>
             </Router>
         </>
     );
