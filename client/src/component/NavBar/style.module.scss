@@ -21,12 +21,14 @@
       margin-bottom: 36px;
 
       a {
-
         font-weight: bold;
         font-size: 26px;
         text-decoration: none;
         color: black;
 
+        &.active {
+          color: red;
+        }
       }
     }
   }
