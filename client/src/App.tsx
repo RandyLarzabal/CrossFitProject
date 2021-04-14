@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import HomeScreen from "./screen/home/HomeScreen";
 import Categorie from "./screen/categorie/CategorieScreen";
 import { Footer, Header } from "./component";
+import DetailScreen from "./screen/detail/DetailScreen";
 //todo add a proxy to the package.json proxy:"http://localhost:3001"
 function App(): JSX.Element {
     return (
@@ -39,6 +40,9 @@ function App(): JSX.Element {
                     </Route>
                     <Route path="/contact">
                         <Categorie category_slug="contact" category_label={"Contact"} />
+                    </Route>
+                    <Route path="/details/:id">
+                        <DetailScreen />
                     </Route>
                     <Route exact path="/about" />
                 </Switch>

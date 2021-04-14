@@ -1,39 +1,75 @@
 import styled from "styled-components";
 
-export { HomeS, HomeHero, HomeGreyBg };
-const HomeS = styled.main``;
+export { DetailS };
 
-const HomeHero = styled.div`
-    height: 800px;
-    margin-top: -80px;
-    position: relative;
+const DetailS = styled.div`
+  display: flex;
+
+  .left {
+    width: 50%;
+    
+    .description {
+      font-size: 18px;
+      line-height:140%
+    }
+  }
+
+  .right {
+    width: 50%;
+    height: 600px;
+    padding: 0px 100px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
+    
+    .infos {
 
-    img {
-        position: absolute;
-        height: 100%;
+      .category {
+        font-size: 18px;
+        color: #676767;
+        margin-bottom: 20px;
+      }
+
+      .flex {
+        display: flex;
+        justify-content: space-between;
+
+        .title {
+          font-size: 24px;
+          font-weight: bold;
+        }
+
+        .price {
+          font-size: 24px;
+          float: right;
+        }
+      }
+    }
+    
+    .colors {
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    .sizes {
+
+      p {
+        font-size: 18px;
+        margin-bottom: 20px;
+      }
+      
+      .sizes-buttons {
+        
+        display: grid;
         width: 100%;
-        object-position: center -100px;
-        z-index: -1;
-    }
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 20px;
 
-    h1 {
-        margin-bottom: 10px;
-        color: #fff;
+        button {
+          width: 100%;
+          color: #000;
+        }
+      }
     }
-
-    p {
-        margin-bottom: 50px;
-        color: #fff;
-        font-family: "Adrianna-CondenseBold", sans-serif;
-        font-size: 22px;
-    }
-`;
-
-const HomeGreyBg = styled.div`
-    margin-top: 100px;
-    padding: 100px 0;
-    background-color: #fbfbfb;
+  }
 `;
